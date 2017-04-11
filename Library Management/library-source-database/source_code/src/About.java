@@ -48,11 +48,11 @@ public class About extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12));
         jLabel3.setForeground(new java.awt.Color(51, 0, 255));
-        jLabel3.setText("http://www.programmer2programmer.net");
+        jLabel3.setText("http://www.academkix.com");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 12));
         jLabel4.setForeground(new java.awt.Color(51, 0, 255));
-        jLabel4.setText("ajprofessionals@gmail.com");
+        jLabel4.setText("jpisagih@oswego.edu");
 
         CmdClose.setText("Close");
         CmdClose.addActionListener(new java.awt.event.ActionListener() {
