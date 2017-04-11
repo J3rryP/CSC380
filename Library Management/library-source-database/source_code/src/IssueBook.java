@@ -1,3 +1,4 @@
+
 /*
  * IssueBook.java
  *
@@ -16,7 +17,11 @@ import javax.swing.JOptionPane;
  */
 public class IssueBook extends javax.swing.JFrame {
 
-    /** Creates new form IssueBook */
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/** Creates new form IssueBook */
     public IssueBook() {
         initComponents();
     }
@@ -54,14 +59,18 @@ public class IssueBook extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setName("jLabel3");
         jLabel3.setText("Member ID :");
 
+        TxtMemberID.setName("TxtMemberID");
         TxtMemberID.setText("jTextField1");
 
+        jLabel1.setName("jLabel1");
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12));
         jLabel1.setForeground(new java.awt.Color(51, 0, 255));
         jLabel1.setText("P2P Library - Issue Book");
 
+        CmdMemberDetails.setName("CmdMemberDetails");
         CmdMemberDetails.setText("Details");
         CmdMemberDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,18 +78,23 @@ public class IssueBook extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setName("jLabel2");
         jLabel2.setText("Name :");
 
+        TxtMemberName.setName("TxtMemberName");
         TxtMemberName.setEditable(false);
         TxtMemberName.setText("jTextField1");
 
         TxtMemberStatus.setEditable(false);
         TxtMemberStatus.setText("jTextField1");
 
+        jLabel4.setName("jLabel4");
         jLabel4.setText("Book ID :");
 
+        TxtBookID.setName("TxtBookID");
         TxtBookID.setText("jTextField1");
 
+        CmdBookDetails.setName("CmdBookDetails");
         CmdBookDetails.setText("Details");
         CmdBookDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,14 +102,18 @@ public class IssueBook extends javax.swing.JFrame {
             }
         });
 
+        jLabel5.setName("jLabel5");
         jLabel5.setText("Title :");
 
+        TxtBookStatus.setName("TxtBookStatus");
         TxtBookStatus.setEditable(false);
         TxtBookStatus.setText("jTextField1");
 
+        TxtBookTitle.setName("TxtBookTitle");
         TxtBookTitle.setEditable(false);
         TxtBookTitle.setText("jTextField1");
 
+        CmdReset.setName("CmdReset");
         CmdReset.setText("Reset");
         CmdReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,6 +121,7 @@ public class IssueBook extends javax.swing.JFrame {
             }
         });
 
+        CmdIssueBook.setName("CmdIssueBook");
         CmdIssueBook.setText("Issue Book");
         CmdIssueBook.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,6 +129,7 @@ public class IssueBook extends javax.swing.JFrame {
             }
         });
 
+        CmdClose.setName("CmdClose");
         CmdClose.setText("Close");
         CmdClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -255,11 +275,10 @@ public class IssueBook extends javax.swing.JFrame {
                 try
         {
             //get database connection details
-            MainClass mc=new MainClass();
-
+            DBManager m = new DBManager();
              //open connection
             Connection connection;
-            connection=DriverManager.getConnection(mc.StrUrl,mc.StrUid,mc.StrPwd);
+            connection=m.getConnection();
             String str="";
             str="select * from lib_member_master where mem_id =? ";
            PreparedStatement pst=connection.prepareStatement(str);
@@ -316,11 +335,11 @@ public class IssueBook extends javax.swing.JFrame {
                 try
         {
             //get database connection details
-            MainClass mc=new MainClass();
+            DBManager m = new DBManager();
 
              //open connection
             Connection connection;
-            connection=DriverManager.getConnection(mc.StrUrl,mc.StrUid,mc.StrPwd);
+            connection=m.getConnection();
             String str="";
             str="select * from lib_book_master where book_id =? ";
            PreparedStatement pst=connection.prepareStatement(str);
@@ -373,12 +392,18 @@ public class IssueBook extends javax.swing.JFrame {
 
     private void ClearText()
     {
-        TxtMemberID.setText("");
+    	TxtMemberID.setName("TxtMemberID");
+    	TxtMemberID.setText("");
+        TxtMemberName.setName("TxtMemberName");
         TxtMemberName.setText("");
+        TxtMemberStatus.setName("TxtMemberStatus");
         TxtMemberStatus.setText("");
 
+        TxtBookID.setName("TxtBookID");
         TxtBookID.setText("");
+        TxtBookTitle.setName("TxtBookTitle");
         TxtBookTitle.setText("");
+        TxtBookStatus.setName("TxtBookStatus");
         TxtBookStatus.setText("");
 
         CmdIssueBook.setEnabled(false);

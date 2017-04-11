@@ -1,3 +1,4 @@
+
 /*
  * BookStatus.java
  *
@@ -8,6 +9,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.AbstractTableModel;
@@ -19,7 +22,11 @@ import javax.swing.JOptionPane;
  */
 public class BookStatus extends javax.swing.JFrame {
 
-    /** Creates new form BookStatus */
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/** Creates new form BookStatus */
     public BookStatus() {
         initComponents();
     }
@@ -46,6 +53,7 @@ public class BookStatus extends javax.swing.JFrame {
             }
         });
 
+        jTable1.setName("jTable1");
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -58,15 +66,18 @@ public class BookStatus extends javax.swing.JFrame {
             }
         ));
         jTable1.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
+        jScrollPane1.setName("jScrollPane1");
         jScrollPane1.setViewportView(jTable1);
 
+        jButton1.setName("jButton1");
         jButton1.setText("Refresh Status");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-
+        
+        CmdClose.setName("CmdClose");
         CmdClose.setText("Close");
         CmdClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,6 +85,7 @@ public class BookStatus extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setName("jLabel1");
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12));
         jLabel1.setForeground(new java.awt.Color(51, 0, 255));
         jLabel1.setText("P2P Library - Book Status");
@@ -113,20 +125,19 @@ public class BookStatus extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         try {
-            MainClass mc=new MainClass();
-
-            Connection connection;
-            connection=DriverManager.getConnection(mc.StrUrl,mc.StrUid,mc.StrPwd);
+            DBManager m = new DBManager();
+           
             ResultSet rs;
 
 
 
 
-            PreparedStatement stmt=connection.prepareStatement("select book_id, book_title, book_category, book_status from lib_book_master order by book_id");
-            rs = stmt.executeQuery();
+            String stmt1 = "select book_id, book_title, book_category, book_status from lib_book_master order by book_id";
+            Statement smt = m.getConnection().createStatement();
+            rs = smt.executeQuery(stmt1);
 
 
-
+            jTable1.setName("jTable1");
             jTable1.getColumnModel().getColumn(0).setHeaderValue("Book ID");
             jTable1.getColumnModel().getColumn(1).setHeaderValue("Title");
             jTable1.getColumnModel().getColumn(2).setHeaderValue("Category");
@@ -150,8 +161,8 @@ public class BookStatus extends javax.swing.JFrame {
                 ((DefaultTableModel) jTable1.getModel()).insertRow(rs.getRow() - 1,row);
             }
 
-        } catch (Exception e) {
-            System.err.println(e);
+        } catch (SQLException se) {
+        	se.printStackTrace();
             //System.exit(1);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -166,7 +177,8 @@ public class BookStatus extends javax.swing.JFrame {
        this.setLocationRelativeTo(null);
 
 
-        jTable1.getColumnModel().getColumn(0).setHeaderValue("Book ID");
+        jTable1.setName("jTable1");
+       	jTable1.getColumnModel().getColumn(0).setHeaderValue("Book ID");
         jTable1.getColumnModel().getColumn(1).setHeaderValue("Title");
         jTable1.getColumnModel().getColumn(2).setHeaderValue("Category");
         jTable1.getColumnModel().getColumn(3).setHeaderValue("Status");

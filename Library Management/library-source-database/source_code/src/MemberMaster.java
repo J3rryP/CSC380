@@ -1,8 +1,4 @@
-/*
- * MemberMaster.java
- *
- *
- */
+
 
 import java.sql.Statement;
 import java.sql.Connection;
@@ -15,7 +11,11 @@ import javax.swing.JOptionPane;
  * @author Jeremiah
  */
 public class MemberMaster extends javax.swing.JFrame {
-    MainClass mc=new MainClass();
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	MainClass mc=new MainClass();
     ResultSet rsmem;
     int rspos=0;
     int rscount=0;

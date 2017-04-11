@@ -1,3 +1,4 @@
+
 /*
  * TransactionReport.java
  *
@@ -19,7 +20,11 @@ import javax.swing.table.DefaultTableModel;
  */
 public class TransactionReport extends javax.swing.JFrame {
 
-    /** Creates new form TransactionReport */
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/** Creates new form TransactionReport */
     public TransactionReport() {
         initComponents();
     }
@@ -33,11 +38,16 @@ public class TransactionReport extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        jLabel1.setName("jLabel1");
         jButton1 = new javax.swing.JButton();
+        jButton1.setName("jButton1");
         CmdClose = new javax.swing.JButton();
+        CmdClose.setName("CmdClose");
         jScrollPane1 = new javax.swing.JScrollPane();
+        jScrollPane1.setName("jScrollPane1");
         jTable1 = new javax.swing.JTable();
-
+        jTable1.setName("jTable1");
+        
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("P2P Library : Transaction Report");
         addWindowListener(new java.awt.event.WindowAdapter() {

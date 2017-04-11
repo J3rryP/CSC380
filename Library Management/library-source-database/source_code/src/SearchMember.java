@@ -1,16 +1,15 @@
+
 /*
  * SearchMember.java
  *
  *
  */
-import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.AbstractTableModel;
 import javax.swing.JOptionPane;
 
 
@@ -20,7 +19,11 @@ import javax.swing.JOptionPane;
  */
 public class SearchMember extends javax.swing.JFrame {
 
-    /** Creates new form SearchMember */
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/** Creates new form SearchMember */
     public SearchMember() {
         initComponents();
     }
@@ -33,18 +36,30 @@ public class SearchMember extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        TxtMemID = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        TxtName = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        TxtMobile = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        CmdClose = new javax.swing.JButton();
-
+        
+    	jLabel1 = new javax.swing.JLabel();
+        jLabel1.setName("jLabel1");
+    	jLabel2 = new javax.swing.JLabel();
+    	jLabel2.setName("jLabel2");
+    	TxtMemID = new javax.swing.JTextField();
+    	TxtMemID.setName("TxtMemID");
+    	jLabel3 = new javax.swing.JLabel();
+    	jLabel3.setName("jLabel3");
+    	TxtName = new javax.swing.JTextField();
+    	TxtName.setName("TxtName");
+    	jLabel4 = new javax.swing.JLabel();
+    	jLabel4.setName("jLabel4");
+    	TxtMobile = new javax.swing.JTextField();
+    	TxtMobile.setName("TxtMobile");
+    	jButton1 = new javax.swing.JButton();
+    	jButton1.setName("jButton1");
+    	jScrollPane1 = new javax.swing.JScrollPane();
+    	jScrollPane1.setName("jScrollPane1");
+    	jTable1 = new javax.swing.JTable();
+    	jTable1.setName("jTable1");
+    	CmdClose = new javax.swing.JButton();
+    	CmdClose.setName("CmdClose");
+    	
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("P2P Library : Search Member");
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -151,10 +166,10 @@ public class SearchMember extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         try {
-            MainClass mc=new MainClass();
+            DBManager ma = new DBManager();
 
             Connection connection;
-            connection=DriverManager.getConnection(mc.StrUrl,mc.StrUid,mc.StrPwd);
+            connection=ma.getConnection();
             ResultSet rs;
 
             String StrQr="";

@@ -19,7 +19,11 @@ import javax.swing.JOptionPane;
  */
 public class Login extends javax.swing.JFrame {
 
-    /** Creates new form Login */
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/** Creates new form Login */
     public Login() {
         initComponents();
     }
@@ -37,6 +41,7 @@ public class Login extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         TxtUserName = new javax.swing.JTextField();
+        TxtUserName.setName("TxtUserName");
         CmdOk = new javax.swing.JButton();
         CmdClose = new javax.swing.JButton();
         TxtPassword = new javax.swing.JPasswordField();
@@ -50,14 +55,18 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setName("jLabel1");
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("P2P JAVA Library Managemnet System");
 
+        jLabel2.setName("jLabel2");
         jLabel2.setText("User Name:");
 
+        jLabel3.setName("jLabel3");
         jLabel3.setText("Password:");
 
+        CmdOk.setName("CmdOk");
         CmdOk.setText("Ok");
         CmdOk.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,6 +74,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        CmdClose.setName("CmdClose");
         CmdClose.setText("Close");
         CmdClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,6 +83,7 @@ public class Login extends javax.swing.JFrame {
         });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setName("jPanel1");
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -162,11 +173,11 @@ public class Login extends javax.swing.JFrame {
         try
         {
             //get database connection details
-            MainClass mc=new MainClass();
+            DBManager ma = new DBManager();
 
              //open connection
             Connection connection;
-            connection=DriverManager.getConnection(mc.StrUrl,mc.StrUid,mc.StrPwd);
+            connection=ma.getConnection();
             String str="";
             str="select * from lib_user where user_name =? and user_password =?";
            PreparedStatement pst=connection.prepareStatement(str);

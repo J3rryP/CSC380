@@ -1,11 +1,10 @@
+
 /*
  * SearchBook.java
  *
  *
  */
- //package javax.swing.table;
-import java.sql.Statement;
-import java.sql.Connection;
+ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -19,7 +18,11 @@ import javax.swing.JOptionPane;
  */
 public class SearchBook extends javax.swing.JFrame {
 
-    /** Creates new form SearchBook */
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/** Creates new form SearchBook */
     public SearchBook() {
         initComponents();
     }
@@ -52,22 +55,30 @@ public class SearchBook extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setName("jLabel1");
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12));
         jLabel1.setForeground(new java.awt.Color(51, 0, 255));
-        jLabel1.setText("P2P Library - Searh Book");
+        jLabel1.setText("P2P Library - Search Book");
 
+        jLabel2.setName("jLabel2");
         jLabel2.setText("Searh by Book ID:");
 
+        TxtBookID.setName("TxtBookID");
         TxtBookID.setText("jTextField1");
 
+        jLabel3.setName("jLabel3");
         jLabel3.setText("Title:");
 
+        TxtTitle.setName("TxtTitle");
         TxtTitle.setText("jTextField1");
 
+        jLabel4.setName("jLabel4");
         jLabel4.setText("Keyword :");
 
+        TxtKeyword.setName("TxtKeyword");
         TxtKeyword.setText("jTextField1");
 
+        jButton1.setName("jButton1");
         jButton1.setText("Search");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,6 +86,7 @@ public class SearchBook extends javax.swing.JFrame {
             }
         });
 
+        jTable1.setName("jTable1");
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -86,9 +98,12 @@ public class SearchBook extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        
         jTable1.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
+        jScrollPane1.setName("jScrollPane1");
         jScrollPane1.setViewportView(jTable1);
 
+        CmdClose.setName("CmdClose");
         CmdClose.setText("Close");
         CmdClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,10 +167,10 @@ public class SearchBook extends javax.swing.JFrame {
         // TODO add your handling code here:
         try
         {
-            MainClass mc=new MainClass();
+            DBManager ma = new DBManager();
 
             Connection connection;
-            connection=DriverManager.getConnection(mc.StrUrl,mc.StrUid,mc.StrPwd);
+            connection=ma.getConnection();
             ResultSet rs;
 
             String StrQr="";

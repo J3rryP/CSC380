@@ -1,3 +1,4 @@
+
 /*
  * ReceiveBook.java
  *
@@ -16,7 +17,11 @@ import javax.swing.JOptionPane;
  */
 public class ReceiveBook extends javax.swing.JFrame {
 
-    /** Creates new form ReceiveBook */
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/** Creates new form ReceiveBook */
     public ReceiveBook() {
         initComponents();
     }
@@ -50,14 +55,18 @@ public class ReceiveBook extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setName("jLabel1");
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12));
         jLabel1.setForeground(new java.awt.Color(51, 0, 255));
         jLabel1.setText("P2P Library - Receive Book");
 
+        jLabel3.setName("jLabel3");
         jLabel3.setText("Member ID :");
 
+        TxtMemberID.setName("TxtMemberID");
         TxtMemberID.setText("jTextField1");
 
+        CmdMemberDetails.setName("CmdMemberDetails");
         CmdMemberDetails.setText("Details");
         CmdMemberDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,11 +74,14 @@ public class ReceiveBook extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setName("jLabel2");
         jLabel2.setText("Name :");
 
+        TxtMemberName.setName("TxtMemberName");
         TxtMemberName.setEditable(false);
         TxtMemberName.setText("jTextField1");
 
+        CmdReset.setName("CmdReset");
         CmdReset.setText("Reset");
         CmdReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,6 +89,7 @@ public class ReceiveBook extends javax.swing.JFrame {
             }
         });
 
+        CmdReceiveBook.setName("CmdReceiveBook");
         CmdReceiveBook.setText("Receive Book");
         CmdReceiveBook.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,6 +97,7 @@ public class ReceiveBook extends javax.swing.JFrame {
             }
         });
 
+        CmdClose.setName("CmdClose");
         CmdClose.setText("Close");
         CmdClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,11 +105,14 @@ public class ReceiveBook extends javax.swing.JFrame {
             }
         });
 
+        TxtBookDetails.setName("TxtBookDetails");
         TxtBookDetails.setEditable(false);
         TxtBookDetails.setText("jTextField1");
 
+        jLabel4.setName("jLabel4");
         jLabel4.setText("Book :");
 
+        LblBookID.setName("LblBookID");
         LblBookID.setFont(new java.awt.Font("Tahoma", 0, 8));
         LblBookID.setForeground(java.awt.Color.lightGray);
 
@@ -169,11 +186,11 @@ public class ReceiveBook extends javax.swing.JFrame {
         //get member deatils
         try {
             //get database connection details
-            MainClass mc=new MainClass();
+            DBManager ma = new DBManager();
 
             //open connection
             Connection connection;
-            connection=DriverManager.getConnection(mc.StrUrl,mc.StrUid,mc.StrPwd);
+            connection=ma.getConnection();
             String str="";
             str="select * from lib_member_master where mem_id =? ";
             PreparedStatement pst=connection.prepareStatement(str);
@@ -233,9 +250,9 @@ public class ReceiveBook extends javax.swing.JFrame {
                 return;
             }
 
-            MainClass mc=new MainClass();
+            DBManager ma = new DBManager();
             Connection connection;
-            connection=DriverManager.getConnection(mc.StrUrl,mc.StrUid,mc.StrPwd);
+            connection=ma.getConnection();
 
             String sql = "update  lib_transaction set trn_receive_dt = sysdate() where trn_mem_id= " + TxtMemberID.getText() + " and trn_receive_dt is null and trn_book_id=" + LblBookID.getText();
             PreparedStatement pst=connection.prepareStatement(sql);

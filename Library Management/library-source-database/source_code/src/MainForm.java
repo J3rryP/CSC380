@@ -1,13 +1,4 @@
 
-//import javax.swing.table.SearchBook;
-
-/*
- * Main.java
- *
- *
- */
-
-
 
 /**
  *
@@ -15,7 +6,11 @@
  */
 public class MainForm extends javax.swing.JFrame {
 
-    /** Creates new form Main */
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/** Creates new form Main */
     public MainForm() {
         initComponents();
     }
@@ -59,15 +54,18 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setName("jLabel1");
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18));
         jLabel1.setForeground(new java.awt.Color(51, 51, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Welcome to P2P Library System");
 
+        jLabel2.setName("jLabel2");
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12));
         jLabel2.setText("[Java + MySQL]");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setName("jPanel1");
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -86,6 +84,7 @@ public class MainForm extends javax.swing.JFrame {
 
         jMenu1.setText("File");
 
+        MnuExits.setName("MnuExits");
         MnuExits.setText("Exit");
         MnuExits.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,6 +97,7 @@ public class MainForm extends javax.swing.JFrame {
 
         jMenu6.setText("Admin");
 
+        jMenuItem7.setName("jMenuItem7");
         jMenuItem7.setText("User Master");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,7 +105,8 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
         jMenu6.add(jMenuItem7);
-
+        
+        jMenuItem8.setName("jMenuItem8");
         jMenuItem8.setText("Change Password");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,6 +119,7 @@ public class MainForm extends javax.swing.JFrame {
 
         jMenu2.setText("Book");
 
+        MnuBookMaster.setName("MnuBookMaster");
         MnuBookMaster.setText("Book Master");
         MnuBookMaster.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,6 +128,7 @@ public class MainForm extends javax.swing.JFrame {
         });
         jMenu2.add(MnuBookMaster);
 
+        MnuSearchBook.setName("MnuSearchBook");
         MnuSearchBook.setText("Search Book");
         MnuSearchBook.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,7 +136,8 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
         jMenu2.add(MnuSearchBook);
-
+        
+        MnuBookStatus.setName("MnuBookStatus");
         MnuBookStatus.setText("Book Status");
         MnuBookStatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,6 +150,7 @@ public class MainForm extends javax.swing.JFrame {
 
         jMenu3.setText("Member");
 
+        jMenuItem1.setName("jMenuItem1");
         jMenuItem1.setText("Member Master");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -154,6 +159,7 @@ public class MainForm extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem1);
 
+        jMenuItem2.setName("jMenuItem2");
         jMenuItem2.setText("Search Mamber");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,6 +177,7 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
+        jMenuItem3.setName("jMenuItem3");
         jMenuItem3.setText("Issue Book");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,6 +186,7 @@ public class MainForm extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem3);
 
+        jMenuItem4.setName("jMenuItem4");
         jMenuItem4.setText("Receive Book");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,6 +195,7 @@ public class MainForm extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem4);
 
+        jMenuItem6.setName("jMenuItem6");
         jMenuItem6.setText("Transaction Report ");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -199,6 +208,7 @@ public class MainForm extends javax.swing.JFrame {
 
         jMenu5.setText("Help");
 
+        jMenuItem5.setName("jMenuItem5");
         jMenuItem5.setText("About");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

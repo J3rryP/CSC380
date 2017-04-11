@@ -1,3 +1,4 @@
+
 /*
  * ChangePassword.java
  *
@@ -16,7 +17,11 @@ import javax.swing.JOptionPane;
  */
 public class ChangePassword extends javax.swing.JFrame {
 
-    /** Creates new form ChangePassword */
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/** Creates new form ChangePassword */
     public ChangePassword() {
         initComponents();
     }
@@ -46,13 +51,17 @@ public class ChangePassword extends javax.swing.JFrame {
                 formWindowOpened(evt);
             }
         });
-
+        
+        jLabel3.setName("jLabel3");
         jLabel3.setText("Old Password:");
 
+        jLabel4.setName("jLabel4");
         jLabel4.setText("New Password:");
 
+        jLabel5.setName("jLabel5");
         jLabel5.setText("Confirm Password:");
 
+        CmdOk.setName("CmdOk");
         CmdOk.setText("Ok");
         CmdOk.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,6 +69,7 @@ public class ChangePassword extends javax.swing.JFrame {
             }
         });
 
+        CmdClose.setName("CmdClose");
         CmdClose.setText("Close");
         CmdClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,6 +77,8 @@ public class ChangePassword extends javax.swing.JFrame {
             }
         });
 
+        
+        jLabel1.setName("jLabel1");
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12));
         jLabel1.setForeground(new java.awt.Color(51, 0, 255));
         jLabel1.setText("P2P Library - Change Password");
@@ -148,11 +160,11 @@ public class ChangePassword extends javax.swing.JFrame {
 
 
             //get database connection details
-            MainClass mc=new MainClass();
+        	DBManager m = new DBManager();
 
             //open connection
             Connection connection;
-            connection=DriverManager.getConnection(mc.StrUrl,mc.StrUid,mc.StrPwd);
+            connection=m.getConnection();
             String str="";
             str="select * from lib_user where user_name =? and user_password =?";
             PreparedStatement pst=connection.prepareStatement(str);

@@ -1,10 +1,3 @@
-/*
- * About.java
- *
- *
- */
-
-
 
 /**
  *
@@ -12,9 +5,15 @@
  */
 public class About extends javax.swing.JFrame {
 
-    /** Creates new form About */
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/** Creates new form About */
     public About() {
         initComponents();
+        
+
     }
 
     /** This method is called from within the constructor to
@@ -39,20 +38,25 @@ public class About extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setName("jLabel1");
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18));
         jLabel1.setForeground(new java.awt.Color(51, 0, 255));
         jLabel1.setText("P2P Library System");
+        
 
+        jLabel2.setName("jLabel2");
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12));
         jLabel2.setText("[Java + MySQL]");
 
+        jLabel3.setName("jLabel3");
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12));
         jLabel3.setForeground(new java.awt.Color(51, 0, 255));
-        jLabel3.setText("http://www.academkix.com");
+        jLabel3.setText("http://www.programmer2programmer.net");
 
+        jLabel4.setName("jLabel4");
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 12));
         jLabel4.setForeground(new java.awt.Color(51, 0, 255));
-        jLabel4.setText("jpisagih@oswego.edu");
+        jLabel4.setText("ajprofessionals@gmail.com");
 
         CmdClose.setText("Close");
         CmdClose.addActionListener(new java.awt.event.ActionListener() {
@@ -132,5 +136,6 @@ public class About extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
+    
 
 }

@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+
 /*
  * BookMaster.java
  *
@@ -18,7 +20,11 @@ import javax.swing.JOptionPane;
  * @author  Jeremiah
  */
 public class BookMaster extends javax.swing.JFrame {
-    MainClass mc=new MainClass();
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	MainClass mc=new MainClass();
     ResultSet rsbook;
     int rspos=0;
     int rscount=0;
@@ -69,46 +75,55 @@ public class BookMaster extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setName("jLabel1");
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12));
         jLabel1.setForeground(new java.awt.Color(51, 0, 255));
         jLabel1.setText("P2P Library - Book Master");
 
+        jLabel2.setName("jLabel2");
         jLabel2.setText("Book ID:");
 
         TxtBookID.setEditable(false);
         TxtBookID.setText("jTextField1");
 
+        jLabel3.setName("jLabel3");
         jLabel3.setText("Book Title:");
 
         TxtBookTitle.setText("jTextField1");
 
+        jLabel4.setName("jLabel4");
         jLabel4.setText("Author:");
 
         TxtAuthor.setText("jTextField1");
 
+        jLabel5.setName("jLabel5");
         jLabel5.setText("Publisher:");
 
         TxtPublisher.setText("jTextField1");
 
+        jLabel6.setName("jLabel6");
         jLabel6.setText("Year Publish:");
 
         TxtYear.setText("jTextField1");
 
+        jLabel7.setName("jLabel7");
         jLabel7.setText("Search Keyword:");
 
         TxtKeywords.setText("jTextField1");
 
+        jLabel8.setName("jLabel8");
         jLabel8.setText("Category:");
 
         CmbCategory.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        CmdFirst.setText("Fisrt");
+        CmdFirst.setName("CmdFirst");
+        CmdFirst.setText("First");
         CmdFirst.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CmdFirstActionPerformed(evt);
             }
         });
 
+        CmdPrevious.setName("CmdPrevious");
         CmdPrevious.setText("Previous");
         CmdPrevious.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,6 +131,7 @@ public class BookMaster extends javax.swing.JFrame {
             }
         });
 
+        CmdNext.setName("CmdNext");
         CmdNext.setText("Next");
         CmdNext.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,6 +139,7 @@ public class BookMaster extends javax.swing.JFrame {
             }
         });
 
+        CmdLast.setName("CmdLast");
         CmdLast.setText("Last");
         CmdLast.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,6 +147,7 @@ public class BookMaster extends javax.swing.JFrame {
             }
         });
 
+        CmdNew.setName("CmdNew");
         CmdNew.setText("New");
         CmdNew.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,6 +155,7 @@ public class BookMaster extends javax.swing.JFrame {
             }
         });
 
+        CmdEdit.setName("CmdEdit");
         CmdEdit.setText("Edit");
         CmdEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,6 +163,7 @@ public class BookMaster extends javax.swing.JFrame {
             }
         });
 
+        CmdSave.setName("CmdSave");
         CmdSave.setText("Save");
         CmdSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,6 +171,7 @@ public class BookMaster extends javax.swing.JFrame {
             }
         });
 
+        CmdClose.setName("CmdClose");
         CmdClose.setText("Close");
         CmdClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,6 +179,7 @@ public class BookMaster extends javax.swing.JFrame {
             }
         });
 
+        LblPosition.setName("LblPosition");
         LblPosition.setText("Book ID:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -277,45 +299,48 @@ public class BookMaster extends javax.swing.JFrame {
 
         try
         {
-
+        	DBManager db = new DBManager();
             this.setLocationRelativeTo(null);
 
             ClearText();
             CmbCategory.removeAllItems();
 
-            Connection connection;
-            connection=DriverManager.getConnection(mc.StrUrl,mc.StrUid,mc.StrPwd);
-            ResultSet rs;
+            ResultSet rs1;
+            Statement stmt_0 = db.getConnection().createStatement();
 
             //fill book category
-            PreparedStatement stmt=connection.prepareStatement("select * from lib_book_category order by book_category");
-            rs = stmt.executeQuery();
-            while (rs.next()){
-                CmbCategory.addItem(rs.getString(1));
+            String stmt0 = "select * from lib_book_category order by book_category";
+            rs1 = stmt_0.executeQuery(stmt0);
+            
+            
+            while (rs1.next()){
+                CmbCategory.addItem(rs1.getString("book_category"));
             }
-            rs.close();
+            rs1.close();
 
-
+            ResultSet rs2;
+            Statement stmt_1 = db.getConnection().createStatement();
             //get book count
-            stmt=connection.prepareStatement("select count(*) from lib_book_master");
-            rs = stmt.executeQuery();
-            rs.first();
-            rscount=rs.getInt(1);
+            String stmt1 = "select count(*) from lib_book_master";
+            rs2 = stmt_1.executeQuery(stmt1);
+            rs2.first();
+            rscount=rs2.getInt(1);
+            
 
             //get book details
-            Statement stmt1 = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+            Statement stmt2 = db.getConnection().createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
             String sqlQuery = "select * from lib_book_master order by book_id";
-            rsbook = stmt1.executeQuery(sqlQuery);
+            rsbook = stmt2.executeQuery(sqlQuery);
 
             //display first record
             rsbook.first();
-
+            
             Display();
 
         }
-        catch (Exception e)
+        catch (SQLException se)
         {
-            System.err.println(e);
+        	se.printStackTrace();
             //System.exit(1);
         }
     }//GEN-LAST:event_formWindowOpened
@@ -485,15 +510,23 @@ public class BookMaster extends javax.swing.JFrame {
         try
         {
             //clear text of fields for entry/display old data
-            TxtBookID.setText(rsbook.getString("book_id"));
-            TxtBookTitle.setText(rsbook.getString("book_title"));
-            TxtAuthor.setText(rsbook.getString("book_author"));
-            TxtPublisher.setText(rsbook.getString("book_publisher"));
-            TxtYear.setText(rsbook.getString("book_publish_year"));
-            CmbCategory.setSelectedItem(rsbook.getString("book_category"));
-            TxtKeywords.setText(rsbook.getString("book_keyword"));
+        	TxtBookID.setName("TxtBookID");
+        	TxtBookID.setText(rsbook.getString("book_id"));
+        	TxtBookTitle.setName("TxtBookTitle");
+        	TxtBookTitle.setText(rsbook.getString("book_title"));
+        	TxtAuthor.setName("TxtAuthor");
+        	TxtAuthor.setText(rsbook.getString("book_author"));
+        	TxtPublisher.setName("TxtPublisher");
+        	TxtPublisher.setText(rsbook.getString("book_publisher"));
+        	TxtYear.setName("TxtYear");
+        	TxtYear.setText(rsbook.getString("book_publish_year"));
+        	CmbCategory.setName("CmbCategory");
+        	CmbCategory.setSelectedItem(rsbook.getString("book_category"));
+        	TxtKeywords.setName("TxtKeywords");
+        	TxtKeywords.setText(rsbook.getString("book_keyword"));
 
-            LblPosition.setText("Record position : " + rsbook.getRow() + "/" + String.valueOf(rscount));
+        	LblPosition.setName("LblPosition");
+        	LblPosition.setText("Record position : " + rsbook.getRow() + "/" + String.valueOf(rscount));
         }
         catch (Exception e)
         {
@@ -505,15 +538,23 @@ public class BookMaster extends javax.swing.JFrame {
     private void ClearText()
     {
         //clear text of fields for entry/display old data
-        TxtBookID.setText("");
-        TxtBookTitle.setText("");
-        TxtAuthor.setText("");
-        TxtPublisher.setText("");
-        TxtYear.setText("");
-        CmbCategory.setSelectedItem(null);
-        TxtKeywords.setText("");
+        TxtBookID.setName("TxtBookID");
+    	TxtBookID.setText("");
+    	TxtBookTitle.setName("TxtBookTitle");
+    	TxtBookTitle.setText("");
+    	TxtAuthor.setName("TxtAuthor");
+    	TxtAuthor.setText("");
+    	TxtPublisher.setName("TxtPublisher");
+    	TxtPublisher.setText("");
+    	TxtYear.setName("TxtYear");
+    	TxtYear.setText("");
+        CmbCategory.setName("CmbCategory");
+    	CmbCategory.setSelectedItem(null);
+    	TxtKeywords.setName("TxtKeywords");
+    	TxtKeywords.setText("");
 
-        LblPosition.setText("");
+    	LblPosition.setName("LblPosition");
+    	LblPosition.setText("");
     }
 
 
