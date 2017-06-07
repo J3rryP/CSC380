@@ -2,159 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37a15620-81a4-419b-b093-997bb6685ec6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Administrator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DBManager.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.README.md.icloud" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/java_library_project_report.doc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/mysql_db/p2p_library_db.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/.manifest.mf.icloud" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/built-jar.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/About$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/About$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/About$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/About.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/BookMaster$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/BookMaster$10.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/BookMaster$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/BookMaster$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/BookMaster$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/BookMaster$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/BookMaster$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/BookMaster$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/BookMaster$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/BookMaster$9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/BookMaster.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/BookStatus$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/BookStatus$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/BookStatus$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/BookStatus$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/BookStatus.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/ChangePassword$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/ChangePassword$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/ChangePassword$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/ChangePassword$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/ChangePassword.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/IssueBook$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/IssueBook$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/IssueBook$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/IssueBook$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/IssueBook$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/IssueBook$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/IssueBook$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/IssueBook.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/Login$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/Login$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/Login$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/Login$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/Login.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MainClass.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MainForm$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MainForm$10.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MainForm$11.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MainForm$12.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MainForm$13.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MainForm$14.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MainForm$15.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MainForm$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MainForm$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MainForm$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MainForm$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MainForm$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MainForm$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MainForm$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MainForm$9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MainForm.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MemberMaster$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MemberMaster$10.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MemberMaster$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MemberMaster$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MemberMaster$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MemberMaster$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MemberMaster$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MemberMaster$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MemberMaster$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MemberMaster$9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/MemberMaster.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/ReceiveBook$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/ReceiveBook$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/ReceiveBook$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/ReceiveBook$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/ReceiveBook$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/ReceiveBook$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/ReceiveBook.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/SearchBook$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/SearchBook$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/SearchBook$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/SearchBook$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/SearchBook.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/SearchMember$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/SearchMember$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/SearchMember$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/SearchMember$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/SearchMember.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/TransactionReport$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/TransactionReport$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/TransactionReport$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/TransactionReport$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/TransactionReport.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/UserMaster$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/UserMaster$10.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/UserMaster$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/UserMaster$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/UserMaster$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/UserMaster$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/UserMaster$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/UserMaster$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/UserMaster$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/UserMaster$9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/UserMaster.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/javax/swing/table/SearchBook$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/javax/swing/table/SearchBook$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/javax/swing/table/SearchBook.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/tp25d4c0.BAT" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/tp25d5dd.BAT" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/build/classes/tp25dfa4.BAT" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/dist/.README.TXT.icloud" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/dist/lib/mysql-connector-java-5.0.7-bin.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/dist/lib/mysql-connector-java-5.1.20-bin.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/dist/p2p_library.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/nbproject/.project.xml.icloud" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/nbproject/build-impl.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/nbproject/genfiles.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/nbproject/private/.config.properties.icloud" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/nbproject/private/private.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/nbproject/private/private.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/nbproject/project.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/src/About.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/src/BookMaster.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/src/BookStatus.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/src/ChangePassword.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/src/DBManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/src/IssueBook.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/src/Login.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/src/MainClass.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/src/MainForm.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/src/MemberMaster.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/src/ReceiveBook.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/src/SearchBook.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/src/SearchMember.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/src/TransactionReport.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/src/UserMaster.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/test/AboutTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/test/BookMasterTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/test/BookStatusTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/test/ChangePasswordTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/test/IssueBookTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/test/LoginTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/test/MainFormTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/test/ReceiveBookTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/test/SearchBookTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/test/SearchMemberTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/test/TransactionReportTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/library-source-database/source_code/test/UserMasterTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/~$va_library_project_report.doc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library Management/~WRL0781.tmp" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/AdministratorTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Administrator.java" afterPath="$PROJECT_DIR$/src/library/Administrator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DBManager.java" afterPath="$PROJECT_DIR$/src/library/DBManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/csc380.iml" afterPath="$PROJECT_DIR$/csc380.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -166,12 +19,12 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Administrator.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Administrator.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Administrator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/library/Administrator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="240">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -179,14 +32,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DBManager.java">
+      <file leaf-file-name="DBManager.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/library/DBManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1063#1071#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -198,6 +50,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -213,7 +67,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/DBManager.java" />
+        <option value="$PROJECT_DIR$/src/AdministratorTest.java" />
         <option value="$PROJECT_DIR$/src/Administrator.java" />
+        <option value="$PROJECT_DIR$/src/library/DBManager.java" />
+        <option value="$PROJECT_DIR$/src/library/Administrator.java" />
+        <option value="$PROJECT_DIR$/src/test/AdministratorTest.java" />
+        <option value="$PROJECT_DIR$/admin.txt" />
       </list>
     </option>
   </component>
@@ -238,8 +97,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -249,8 +108,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="csc380" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -262,14 +121,28 @@
               <option name="myItemId" value="csc380" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -283,7 +156,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.AdministratorTest">
+    <configuration default="false" name="AdministratorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="csc380" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.AdministratorTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -488,6 +382,14 @@
       <listeners />
       <method />
     </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.AdministratorTest" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.AdministratorTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -502,37 +404,69 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="AdministratorTest - 2017.06.07 at 02h 42m 36s.xml">
+      <configuration name="AdministratorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdministratorTest - 2017.06.07 at 02h 44m 56s.xml">
+      <configuration name="AdministratorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdministratorTest - 2017.06.07 at 02h 52m 15s.xml">
+      <configuration name="AdministratorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdministratorTest - 2017.06.07 at 02h 56m 31s.xml">
+      <configuration name="AdministratorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdministratorTest - 2017.06.07 at 02h 58m 39s.xml">
+      <configuration name="AdministratorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdministratorTest - 2017.06.07 at 02h 59m 04s.xml">
+      <configuration name="AdministratorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdministratorTest - 2017.06.07 at 03h 04m 32s.xml">
+      <configuration name="AdministratorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdministratorTest - 2017.06.07 at 03h 05m 37s.xml">
+      <configuration name="AdministratorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdministratorTest - 2017.06.07 at 03h 05m 48s.xml">
+      <configuration name="AdministratorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdministratorTest - 2017.06.07 at 03h 06m 08s.xml">
+      <configuration name="AdministratorTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
     <frame x="40" y="22" width="1400" height="813" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -542,27 +476,218 @@
     <breakpoint-manager />
     <watches-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/DBManager.java">
+    <entry file="file://$PROJECT_DIR$/src/library/Administrator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/AdministratorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csc380.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/library/Administrator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/library/DBManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/AdministratorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="46" lean-forward="true" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/library/Administrator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/library/DBManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
           <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1063#1071#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Administrator.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/src.zip!/java/lang/ClassLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="371">
+          <caret line="351" column="6" lean-forward="false" selection-start-line="351" selection-start-column="6" selection-end-line="351" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csc380.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="494" column="0" lean-forward="false" selection-start-line="494" selection-start-column="0" selection-end-line="494" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/AdministratorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/library/Administrator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/library/DBManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>csc380</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

@@ -1,12 +1,15 @@
+package library;
+
 import java.io.*;
 import java.util.ArrayList;
 
 /**
- * Created by davidkyere on 6/5/17.
+ * Created by davidkyere & jerrypisagih on 6/5/17.
  */
+
 public class DBManager {
 
-    private final String adminFile  = "admin.txt";
+    private static final String adminFile  = "admin.txt";
 
     public static void write(String s){
         BufferedWriter bw = null;

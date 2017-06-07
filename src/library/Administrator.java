@@ -1,8 +1,12 @@
+package library;
+
+import library.DBManager;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- * Created by davidkyere on 6/5/17.
+ * Created by davidkyere & jerrypisagih on 6/5/17.
  */
 public class Administrator {
 
@@ -16,11 +20,12 @@ public class Administrator {
     }
 
     public void editUser(String username , String opassword , String password) throws IOException{
-        String ocredentials = username + " " + password;
+        String ocredentials = username + " " + opassword;
         String credential = username + " " + password;
 
         ArrayList<String> passes = DBManager.readAll();
         int opass = passes.indexOf(ocredentials);
+        System.out.println(opass);
         passes.remove(opass);
         passes.add(credential);
 
