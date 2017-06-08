@@ -10,27 +10,42 @@ import java.util.ArrayList;
  */
 public class Administrator {
 
+    private static final String adminFile  = "admin.txt";
+
     public Administrator(){
 
     }
 
-    public void newUser(String username , String password){
+    public void newUser(String username , String password) throws IOException{
         String credentials = username + " " + password;
-        DBManager.write(credentials);
+        DBManager.write(credentials,adminFile);
     }
 
     public void editUser(String username , String opassword , String password) throws IOException{
         String ocredentials = username + " " + opassword;
         String credential = username + " " + password;
 
-        ArrayList<String> passes = DBManager.readAll();
+        ArrayList<String> passes = DBManager.readAll(adminFile);
         int opass = passes.indexOf(ocredentials);
-        System.out.println(opass);
+
         passes.remove(opass);
         passes.add(credential);
 
-        DBManager.writeAll(passes);
+        DBManager.writeAll(passes,adminFile);
     }
 
-    //delete user
+    public void deleteUser(String username , String password) throws IOException {
+        String credentials = username + " " + password;
+
+        ArrayList<String> passes = DBManager.readAll(adminFile);
+        int found = passes.indexOf(credentials);
+
+        passes.remove(found);
+
+        try {
+            DBManager.writeAll(passes,adminFile);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
