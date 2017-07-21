@@ -1,0 +1,134 @@
+[33mcommit eac892b54482bea3e4a7badbd85e2463442627ee[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: David Yeboah Borelli <dborelli@Davids-MBP.home>
+Date:   Tue Jul 11 02:09:17 2017 -0400
+
+    david's activity
+
+[33mcommit 645ac8e50be2ad41fc5b97bd2eb6de3f5b2f60c9[m
+Author: J3rryP <jpisagih@oswego.edu>
+Date:   Fri Jun 30 14:18:35 2017 -0400
+
+    Add existing file
+
+[33mcommit 115b91a6f09c768b8d0cf5e271af4d61352c6078[m
+Author: J3rryP <jpisagih@oswego.edu>
+Date:   Thu Jun 22 16:36:27 2017 -0400
+
+    Add files via upload
+
+[33mcommit 57f1ea0be95e966e332b0949c112a3a2f2653498[m
+Author: David Yeboah <dyeboah@oswego.edu>
+Date:   Fri Jun 9 11:42:00 2017 -0400
+
+     modified classes and add new test files
+
+[33mcommit 13798fcdb0dfa9e1d4e7ac47fe044ef4739093ba[m
+Author: David Yeboah <dyeboah@oswego.edu>
+Date:   Thu Jun 8 09:31:35 2017 -0400
+
+    inventory test
+
+[33mcommit f4dfaed22cdf2ec640695a0c79fc622d078b3954[m
+Author: David Yeboah <dyeboah@oswego.edu>
+Date:   Wed Jun 7 03:08:07 2017 -0400
+
+    implemented new & edit user test
+
+[33mcommit fe46fb411c27cc5176e88518e4cca8a66efd8822[m
+Author: David Yeboah <dyeboah@oswego.edu>
+Date:   Mon Jun 5 11:31:11 2017 -0400
+
+    started admin class
+
+[33mcommit 7eb52ab95729df163cbe7786fba3f32aac383fa5[m
+Author: David Yeboah <dyeboah@oswego.edu>
+Date:   Fri Jun 2 02:11:17 2017 -0400
+
+    new app
+
+[33mcommit 3805c994864f31e55c07cedcb9f0389cb76170ec[m
+Author: David Yeboah <dyeboah@oswego.edu>
+Date:   Tue Apr 11 14:34:03 2017 -0400
+
+    added db connection
+
+[33mcommit 1c7afe642eeec7cdcff36008c3038b37962cc539[m
+Merge: 438c5c3 99721a2
+Author: David Yeboah <dyeboah@oswego.edu>
+Date:   Tue Apr 11 14:25:45 2017 -0400
+
+    Merge branch 'master' of https://github.com/J3rryP/CSC380
+    
+    Bcs its nessecarry
+
+[33mcommit 438c5c39137e3da1b520d8289e3e70bf39e140e8[m
+Author: David Yeboah <dyeboah@oswego.edu>
+Date:   Tue Apr 11 14:25:24 2017 -0400
+
+    will change the method names later
+
+[33mcommit 99721a2eae32baf96f4b59e9eab39c75e0e1626d[m
+Author: J3rryP <jpisagih@oswego.edu>
+Date:   Thu Apr 6 10:07:13 2017 -0400
+
+    Add files via upload
+
+[33mcommit e8f0443d2fe36a7d0879b1ddf79a12f6af0a21a3[m
+Author: J3rryP <jpisagih@oswego.edu>
+Date:   Wed Apr 5 15:27:20 2017 -0400
+
+    Update About.java
+
+[33mcommit 3e188649e117e79246ed736df8293cdc45b64276[m
+Author: David Yeboah <dyeboah@oswego.edu>
+Date:   Wed Apr 5 14:04:47 2017 -0400
+
+    fest test example
+
+[33mcommit 3525f313318f6d9cbba7edf32ed6a920cbd6826e[m
+Author: David Yeboah <dyeboah@oswego.edu>
+Date:   Tue Apr 4 12:14:52 2017 -0400
+
+    extract
+
+[33mcommit 20462bba78677681dca34ccda406b971fa9adee5[m
+Author: J3rryP <jpisagih@oswego.edu>
+Date:   Sun Apr 2 16:03:43 2017 -0400
+
+    Add files via upload
+
+[33mcommit 7e4293c2ea59f373686e856f5b1e47361fe0f98e[m
+Author: David Yeboah <dyeboah@oswego.edu>
+Date:   Tue Feb 28 23:40:49 2017 -0500
+
+    extracted zip
+
+[33mcommit 904fe61c1c2b10bb60a49272473649c5152a5927[m[33m ([m[1;31morigin/ParkingApp[m[33m)[m
+Author: J3rryP <jpisagih@oswego.edu>
+Date:   Sun Feb 26 18:29:47 2017 -0500
+
+    Add files via upload
+
+[33mcommit 6c28c22f7cfd8b407621a061efe13edeb1da9ff9[m
+Author: David Yeboah <dyeboah@oswego.edu>
+Date:   Sun Feb 26 12:09:24 2017 -0500
+
+    made changes to abstract classes
+
+[33mcommit 9761a4cdfcb591ccccc38158842c11dcfaa87e38[m
+Author: David Yeboah <dyeboah@oswego.edu>
+Date:   Sun Feb 26 11:21:25 2017 -0500
+
+    made changes to abstract classes
+
+[33mcommit 17b2a44876235e8fa7734c814520aec64231d06d[m
+Author: David Yeboah <dyeboah@oswego.edu>
+Date:   Sat Feb 25 12:42:06 2017 -0500
+
+    abstract classes
+
+[33mcommit 7427632fafbbfe6808900b3674cf0d9cdc280e42[m
+Author: J3rryP <jpisagih@oswego.edu>
+Date:   Fri Feb 24 14:00:22 2017 -0500
+
+    Initial commit
