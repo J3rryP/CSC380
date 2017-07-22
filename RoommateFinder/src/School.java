@@ -1,7 +1,7 @@
 import java.util.*;
 
 
-// Author: Jeremiah
+// @author Jeremiah
 /**
  * This class houses the student objects at two levels: school and building.
  * The building class is found at the end, nested within the school class.
