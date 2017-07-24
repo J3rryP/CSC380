@@ -26,7 +26,12 @@ public class Student {
     public Student(){
         matches = new ArrayList<Student>();
     }
+<<<<<<< HEAD
+    School schools = new School("");
+    
+=======
 
+>>>>>>> 247e8cac7bde41449544d4bea261f27f928fb13b
     public Student(long i , String u , String p , boolean a , String e , String y , String g , String d, String m, String l){
         this.id = i;
         this.username = u;
@@ -40,6 +45,10 @@ public class Student {
         this.language = l;
         matches = new ArrayList<Student>();
     }
+<<<<<<< HEAD
+   
+=======
+>>>>>>> 247e8cac7bde41449544d4bea261f27f928fb13b
 
     public void setId(long id) {
         this.id = id;
@@ -150,4 +159,17 @@ public class Student {
         return Objects.hash(this.id,this.email);
     }
 
+<<<<<<< HEAD
+    void setSchool(School schools) {
+        
+        this.schools = schools;
+
+    }
+    public String getSchool(){
+        
+     return schools.getName();   
+    }
+    }
+=======
 }
+>>>>>>> 247e8cac7bde41449544d4bea261f27f928fb13b
