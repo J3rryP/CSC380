@@ -175,4 +175,24 @@ public class School
          */
 		public String getName(){return name;}
 	}
+        
+        public static void main(String[] args){
+            
+            System.out.println("Hello World");
+            
+            Student s = new Student();
+            
+            s.email = "joe@aol.com";
+            
+            
+            System.out.println(s.email);
+            
+            School z = new School("Oswego");
+            
+          
+            
+            System.out.println(z.getName());
+            
+            
+        }
 }
