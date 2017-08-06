@@ -21,7 +21,7 @@ public class LogInGUI extends javax.swing.JFrame {
     public LogInGUI() {
         initComponents();
         
-       
+
     }
 
     /**
@@ -137,12 +137,14 @@ public class LogInGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_logInButtonActionPerformed
 
+    
+    
     private void signUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signUpButtonActionPerformed
        
-               //LogInGUI lg = new LogInGUI();
+               LogInGUI lg = new LogInGUI();
                SignUpGUI sp = new SignUpGUI();
                
-               MainMenuGUI mn = new MainMenuGUI();
+              // MainMenuGUI mn = new MainMenuGUI();
                
                
                //lg.getContentPane().add(sp,BorderLayout.WEST);
@@ -150,8 +152,11 @@ public class LogInGUI extends javax.swing.JFrame {
                
                //sp.show();
                
+               
+               
+               
                sp.setVisible(true);
-               //mn.setVisible(true);
+               lg.setVisible(false);
         
       
     // TODO add your handling code here:
