@@ -78,9 +78,9 @@ public class SignUpGUI extends javax.swing.JFrame {
 
         mComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        lComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        lComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "English", "French", "Spanish", "Italian" }));
 
-        bComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        bComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Hart", "Funnell", "Oneida", "Seneca" }));
 
         jLabel8.setText("Roommate Finder Sign Up Form");
 
