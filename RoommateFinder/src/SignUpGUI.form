@@ -177,6 +177,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="nameField">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nameFieldActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="emailField">
     </Component>
@@ -263,6 +266,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Sign Up"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="signUpButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="cancelButton">
       <Properties>

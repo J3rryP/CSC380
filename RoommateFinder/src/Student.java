@@ -10,6 +10,7 @@ import java.util.Objects;
 public class Student {
 
     protected long id;
+    protected String name;
     protected String username;
     protected String password;
     protected String lastLogin;
@@ -28,8 +29,9 @@ public class Student {
     }
     School schools = new School("");
     
-    public Student(long i , String u , String p , boolean a , String e , String y , String g , String d, String m, String l){
+    public Student(long i , String n, String u , String p , boolean a , String e , String y , String g , String d, String m, String l){
         this.id = i;
+        this.name = n;
         this.username = u;
         this.password = p;
         this.lastLogin = Calendar.getInstance().getTime().toString();
@@ -50,13 +52,22 @@ public class Student {
     public void setEmail(String email) {
         this.email = email;
     }
-
+    
+    public void setName(String name){
+        this.name = name;
+        
+    }
+    
     public long getId() {
         return id;
     }
 
     public String getEmail() {
         return email;
+    }
+    
+    public String getName(){
+        return name;
     }
 
     public boolean isActive() {

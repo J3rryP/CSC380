@@ -9,6 +9,9 @@
  * @author Jeremiah
  */
 public class SignUpGUI extends javax.swing.JFrame {
+    
+    
+    Student st = new Student();
 
     /**
      * Creates new form SignUpGUI
@@ -64,6 +67,12 @@ public class SignUpGUI extends javax.swing.JFrame {
 
         jLabel7.setText("Building Preference:");
 
+        nameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nameFieldActionPerformed(evt);
+            }
+        });
+
         freshmanCheckBox.setText("Freshman");
         freshmanCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,6 +124,11 @@ public class SignUpGUI extends javax.swing.JFrame {
         jLabel8.setText("Roommate Finder Sign Up Form");
 
         signUpButton.setText("Sign Up");
+        signUpButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                signUpButtonActionPerformed(evt);
+            }
+        });
 
         cancelButton.setText("Cancel");
 
@@ -273,6 +287,20 @@ public class SignUpGUI extends javax.swing.JFrame {
         mCheckBox.setSelected(false);
         fCheckBox.setSelected(true);
     }//GEN-LAST:event_fCheckBoxActionPerformed
+
+    private void nameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameFieldActionPerformed
+        // TODO add your handling code here:
+        
+        
+        
+    }//GEN-LAST:event_nameFieldActionPerformed
+
+    private void signUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signUpButtonActionPerformed
+        // TODO add your handling code here:
+        
+        
+        
+    }//GEN-LAST:event_signUpButtonActionPerformed
 
     /**
      * @param args the command line arguments
