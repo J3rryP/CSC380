@@ -65,16 +65,46 @@ public class SignUpGUI extends javax.swing.JFrame {
         jLabel7.setText("Building Preference:");
 
         freshmanCheckBox.setText("Freshman");
+        freshmanCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                freshmanCheckBoxActionPerformed(evt);
+            }
+        });
 
         sophomoreCheckBox.setText("Sophomore");
+        sophomoreCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sophomoreCheckBoxActionPerformed(evt);
+            }
+        });
 
         juniorCheckBox.setText("Junior");
+        juniorCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                juniorCheckBoxActionPerformed(evt);
+            }
+        });
 
         seniorCheckBox.setText("Senior");
+        seniorCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                seniorCheckBoxActionPerformed(evt);
+            }
+        });
 
         mCheckBox.setText("M");
+        mCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mCheckBoxActionPerformed(evt);
+            }
+        });
 
         fCheckBox.setText("F");
+        fCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fCheckBoxActionPerformed(evt);
+            }
+        });
 
         mComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -186,6 +216,63 @@ public class SignUpGUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void freshmanCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_freshmanCheckBoxActionPerformed
+    // TODO add your handling code here:
+        
+         freshmanCheckBox.setSelected(true);
+         sophomoreCheckBox.setSelected(false);
+         juniorCheckBox.setSelected(false);
+         seniorCheckBox.setSelected(false);
+                    
+                    
+                
+        
+    }//GEN-LAST:event_freshmanCheckBoxActionPerformed
+
+    private void sophomoreCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sophomoreCheckBoxActionPerformed
+        // TODO add your handling code here:
+        
+         freshmanCheckBox.setSelected(false);
+         sophomoreCheckBox.setSelected(true);
+         juniorCheckBox.setSelected(false);
+         seniorCheckBox.setSelected(false);
+        
+    }//GEN-LAST:event_sophomoreCheckBoxActionPerformed
+
+    private void juniorCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_juniorCheckBoxActionPerformed
+        // TODO add your handling code here:
+        
+        freshmanCheckBox.setSelected(false);
+         sophomoreCheckBox.setSelected(false);
+         juniorCheckBox.setSelected(true);
+         seniorCheckBox.setSelected(false);
+        
+    }//GEN-LAST:event_juniorCheckBoxActionPerformed
+
+    private void seniorCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seniorCheckBoxActionPerformed
+        // TODO add your handling code here:
+        
+        freshmanCheckBox.setSelected(false);
+         sophomoreCheckBox.setSelected(false);
+         juniorCheckBox.setSelected(false);
+         seniorCheckBox.setSelected(true);
+    }//GEN-LAST:event_seniorCheckBoxActionPerformed
+
+    private void mCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mCheckBoxActionPerformed
+        // TODO add your handling code here:
+        
+        mCheckBox.setSelected(true);
+        fCheckBox.setSelected(false);
+        
+    }//GEN-LAST:event_mCheckBoxActionPerformed
+
+    private void fCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fCheckBoxActionPerformed
+        // TODO add your handling code here:
+        
+        mCheckBox.setSelected(false);
+        fCheckBox.setSelected(true);
+    }//GEN-LAST:event_fCheckBoxActionPerformed
 
     /**
      * @param args the command line arguments
