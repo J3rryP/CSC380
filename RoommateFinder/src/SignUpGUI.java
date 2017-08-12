@@ -10,6 +10,8 @@
  */
 public class SignUpGUI extends javax.swing.JFrame {
 
+    String name , gender , major , language , password , email , year ;
+    
     /**
      * Creates new form SignUpGUI
      */
@@ -47,113 +49,212 @@ public class SignUpGUI extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         signUpButton = new javax.swing.JButton();
         cancelButton = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        passField1 = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jLabel1.setText("Name:");
 
+        jLabel2.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jLabel2.setText("Email:");
 
+        jLabel3.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jLabel3.setText("Year:");
 
+        jLabel4.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jLabel4.setText("Gender:");
 
+        jLabel5.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jLabel5.setText("Major:");
 
+        jLabel6.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jLabel6.setText("Language:");
 
+        jLabel7.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jLabel7.setText("Building Preference:");
 
+        nameField.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
+
+        emailField.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
+        emailField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailFieldActionPerformed(evt);
+            }
+        });
+
+        freshmanCheckBox.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         freshmanCheckBox.setText("Freshman");
+        freshmanCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                freshmanCheckBoxActionPerformed(evt);
+            }
+        });
 
+        sophomoreCheckBox.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         sophomoreCheckBox.setText("Sophomore");
+        sophomoreCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sophomoreCheckBoxActionPerformed(evt);
+            }
+        });
 
+        juniorCheckBox.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         juniorCheckBox.setText("Junior");
+        juniorCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                juniorCheckBoxActionPerformed(evt);
+            }
+        });
 
+        seniorCheckBox.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         seniorCheckBox.setText("Senior");
+        seniorCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                seniorCheckBoxActionPerformed(evt);
+            }
+        });
 
+        mCheckBox.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         mCheckBox.setText("M");
+        mCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mCheckBoxActionPerformed(evt);
+            }
+        });
 
+        fCheckBox.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         fCheckBox.setText("F");
+        fCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fCheckBoxActionPerformed(evt);
+            }
+        });
 
-        mComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        mComboBox.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
+        mComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Computer Science", "Chemistry", "Physics", "Other" }));
+        mComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mComboBoxActionPerformed(evt);
+            }
+        });
 
+        lComboBox.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         lComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "English", "French", "Spanish", "Italian" }));
+        lComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lComboBoxActionPerformed(evt);
+            }
+        });
 
-        bComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Hart", "Funnell", "Oneida", "Seneca" }));
+        bComboBox.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
+        bComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Hart", "Funnelle", "Oneida", "Seneca" }));
 
-        jLabel8.setText("Roommate Finder Sign Up Form");
+        jLabel8.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
+        jLabel8.setText("Sign Up Form");
 
-        signUpButton.setText("Sign Up");
+        signUpButton.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
+        signUpButton.setText("SIGN UP");
+        signUpButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                signUpButtonActionPerformed(evt);
+            }
+        });
 
-        cancelButton.setText("Cancel");
+        cancelButton.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
+        cancelButton.setText("CANCEL");
+        cancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelButtonActionPerformed(evt);
+            }
+        });
+
+        jLabel9.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
+        jLabel9.setText("Password:");
+
+        passField1.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
+        passField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passField1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel1)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(nameField, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel2)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(emailField)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(mCheckBox)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(fCheckBox))
-                            .addComponent(mComboBox, 0, 103, Short.MAX_VALUE)
-                            .addComponent(lComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(bComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(freshmanCheckBox)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(sophomoreCheckBox)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(49, 49, 49)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(signUpButton)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cancelButton))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(mCheckBox)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(fCheckBox))
+                                    .addComponent(mComboBox, 0, 103, Short.MAX_VALUE)
+                                    .addComponent(lComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(juniorCheckBox)
+                                .addComponent(jLabel7)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(seniorCheckBox)))))
-                .addContainerGap(99, Short.MAX_VALUE))
+                                .addComponent(bComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(freshmanCheckBox)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(sophomoreCheckBox)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(signUpButton)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(cancelButton))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(juniorCheckBox)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(seniorCheckBox))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel9))
+                                .addGap(31, 31, 31)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(nameField, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(passField1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(201, 201, 201)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jLabel8)
-                .addGap(62, 62, 62)
+                .addGap(25, 25, 25)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(nameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
                     .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel9)
+                    .addComponent(passField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(freshmanCheckBox)
@@ -165,27 +266,91 @@ public class SignUpGUI extends javax.swing.JFrame {
                     .addComponent(jLabel4)
                     .addComponent(mCheckBox)
                     .addComponent(fCheckBox))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(mComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(lComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(bComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(signUpButton)
                     .addComponent(cancelButton))
-                .addGap(54, 54, 54))
+                .addGap(11, 11, 11))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void mCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mCheckBoxActionPerformed
+        // TODO add your handling code here:
+         gender = "M";
+    }//GEN-LAST:event_mCheckBoxActionPerformed
+
+    private void freshmanCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_freshmanCheckBoxActionPerformed
+        // TODO add your handling code here:
+         year = "freshman";
+    }//GEN-LAST:event_freshmanCheckBoxActionPerformed
+
+    private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_cancelButtonActionPerformed
+
+    private void mComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mComboBoxActionPerformed
+        // TODO add your handling code here:
+         major = (String) mComboBox.getSelectedItem();
+        
+    }//GEN-LAST:event_mComboBoxActionPerformed
+
+    private void signUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signUpButtonActionPerformed
+        // TODO add your handling code here:
+        name = nameField.getText();
+         email = emailField.getText();
+         password = passField1.getText();
+         
+         Student s = new Student(name,password,email, year,gender,major,language);
+         s.save(); //if successful , dispose
+        
+    }//GEN-LAST:event_signUpButtonActionPerformed
+
+    private void emailFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailFieldActionPerformed
+
+    private void passField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passField1ActionPerformed
+
+    private void sophomoreCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sophomoreCheckBoxActionPerformed
+        // TODO add your handling code here:
+         year = "sophomore";
+    }//GEN-LAST:event_sophomoreCheckBoxActionPerformed
+
+    private void juniorCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_juniorCheckBoxActionPerformed
+        // TODO add your handling code here:
+         year = "junior";
+    }//GEN-LAST:event_juniorCheckBoxActionPerformed
+
+    private void seniorCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seniorCheckBoxActionPerformed
+        // TODO add your handling code here:
+         year = "senior";
+    }//GEN-LAST:event_seniorCheckBoxActionPerformed
+
+    private void fCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fCheckBoxActionPerformed
+        // TODO add your handling code here:
+         gender = "F";
+    }//GEN-LAST:event_fCheckBoxActionPerformed
+
+    private void lComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lComboBoxActionPerformed
+        // TODO add your handling code here:
+        language = (String) lComboBox.getSelectedItem();
+    }//GEN-LAST:event_lComboBoxActionPerformed
 
     /**
      * @param args the command line arguments
@@ -236,13 +401,16 @@ public class SignUpGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JCheckBox juniorCheckBox;
     private javax.swing.JComboBox lComboBox;
     private javax.swing.JCheckBox mCheckBox;
     private javax.swing.JComboBox mComboBox;
     private javax.swing.JTextField nameField;
+    private javax.swing.JTextField passField1;
     private javax.swing.JCheckBox seniorCheckBox;
     private javax.swing.JButton signUpButton;
     private javax.swing.JCheckBox sophomoreCheckBox;
     // End of variables declaration//GEN-END:variables
+
 }

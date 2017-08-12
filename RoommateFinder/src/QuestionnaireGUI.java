@@ -57,64 +57,99 @@ public class QuestionnaireGUI extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
+        jLabel1.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jLabel1.setText("Assessment Profile Questions");
 
+        jLabel2.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jLabel2.setText("Do you mind Clutter in Room?");
 
+        jLabel3.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jLabel3.setText("Do you mind alarm clocks?");
 
+        jLabel4.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jLabel4.setText("Do you mind loud visitors?");
 
+        jLabel5.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jLabel5.setText("Can you sleep with lights on?");
 
+        jLabel6.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jLabel6.setText("Do you mind noise past Midnight?");
 
-        jLabel7.setText("Do you consider yourself an introvert?");
+        jLabel7.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
+        jLabel7.setText("Do you consider yourself as an introvert?");
 
-        jLabel8.setText("Do you consider yourself an extrovert?");
+        jLabel8.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
+        jLabel8.setText("Do you consider yourself as an extrovert?");
 
+        jLabel9.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jLabel9.setText("Do you like to go to parties?");
 
+        jLabel10.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jLabel10.setText("Do you drink alcoholic beverages?(21+)");
 
+        jCheckBox1.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox1.setText("Yes");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
 
+        jCheckBox2.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox2.setText("No");
 
+        jCheckBox3.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox3.setText("Yes");
 
+        jCheckBox4.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox4.setText("No");
 
+        jCheckBox5.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox5.setText("Yes");
 
+        jCheckBox6.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox6.setText("No");
 
+        jCheckBox7.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox7.setText("Yes");
 
+        jCheckBox8.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox8.setText("No");
 
+        jCheckBox9.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox9.setText("Yes");
 
+        jCheckBox10.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox10.setText("No");
 
+        jCheckBox11.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox11.setText("Yes");
 
+        jCheckBox12.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox12.setText("No");
 
+        jCheckBox13.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox13.setText("Yes");
 
+        jCheckBox14.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox14.setText("No");
 
+        jCheckBox15.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox15.setText("Yes");
 
+        jCheckBox16.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox16.setText("No");
 
+        jCheckBox17.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox17.setText("Yes");
 
+        jCheckBox18.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox18.setText("No");
 
+        jButton1.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jButton1.setText("SAVE");
 
+        jButton2.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jButton2.setText("BACK");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -122,22 +157,29 @@ public class QuestionnaireGUI extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(351, 351, 351)
+                        .addComponent(jButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(138, 138, 138)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -176,16 +218,14 @@ public class QuestionnaireGUI extends javax.swing.JPanel {
                                 .addComponent(jCheckBox17)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jCheckBox18)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addGap(56, 56, 56))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addGap(25, 25, 25)
                 .addComponent(jLabel1)
-                .addGap(51, 51, 51)
+                .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jCheckBox1)
@@ -236,9 +276,13 @@ public class QuestionnaireGUI extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

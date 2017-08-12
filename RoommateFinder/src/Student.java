@@ -10,10 +10,9 @@ import java.util.Objects;
 public class Student {
 
     protected long id;
-    protected String username;
+    protected String name;
     protected String password;
     protected String lastLogin;
-    protected boolean isActive = true;
     protected String email;
     protected String gender;
     protected String year;
@@ -22,18 +21,17 @@ public class Student {
     protected String language;
 
     protected ArrayList<Student> matches;
+    School schools = new School("");
 
     public Student(){
         matches = new ArrayList<Student>();
     }
-    School schools = new School("");
     
-    public Student(long i , String u , String p , boolean a , String e , String y , String g , String d, String m, String l){
-        this.id = i;
-        this.username = u;
+    
+    public Student( String u , String p , String e , String y , String g , String m, String l){
+        this.name = u;
         this.password = p;
         this.lastLogin = Calendar.getInstance().getTime().toString();
-        this.isActive = a;
         this.email = e;
         this.gender = g;
         this.year = y;
@@ -59,10 +57,7 @@ public class Student {
         return email;
     }
 
-    public boolean isActive() {
-        return isActive;
-    }
-
+  
     public String getLastLogin() {
         return lastLogin;
     }
@@ -71,12 +66,8 @@ public class Student {
         return password;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void setIsActive(boolean active) {
-        isActive = active;
+    public String getName() {
+        return name;
     }
 
     public void setLastLogin(Date lastLogin) {
@@ -87,8 +78,8 @@ public class Student {
         this.password = password;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getYear() {
@@ -161,4 +152,9 @@ public class Student {
         
      return schools.getName();   
     }
+    
+    public void save(){
+    
+    }
+    
     }
