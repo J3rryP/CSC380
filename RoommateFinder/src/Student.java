@@ -184,7 +184,7 @@ public class Student {
         return false;
     }
     
-    public boolean find(String n , String p) throws IOException{
+    public Student find(String n , String p) throws IOException{
         Connection conn = null;
         Statement  stmt = null;
         
@@ -198,20 +198,24 @@ public class Student {
             ResultSet rs = null;
             rs = stmt.executeQuery(f);
             
-            if (rs.next()) {
+            if (rs.next()) { //not all info about students are included .
                 this.name = rs.getString("name");
                 this.email = rs.getString("email");
                 this.gender = rs.getString("gender");
                 this.year = rs.getString("year");
-                return true;
+                this.building = rs.getString("building");
+                this.language = rs.getString("language");
+                this.major = rs.getString("major");
+                this.id = rs.getInt("id");
+                return this;
             } else {
                 
-                return false;
+                return null;
             }
         }catch(Exception se){
             se.printStackTrace();
         }
-        return false;
+        return null;
     }
 
 }

@@ -1,3 +1,7 @@
+
+import java.sql.*;
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -6,16 +10,26 @@
 
 /**
  *
- * @author Jeremiah
+ * @author dborelli
  */
-public class QuestionnaireGUI extends javax.swing.JPanel {
+public class QuestionnaireGUI extends javax.swing.JFrame {
 
     /**
-     * Creates new form Questionnaire
+     * Creates new form QGUI
      */
+    
+    String A,B,C,D,E,F,G,H,I, email, password;
     public QuestionnaireGUI() {
-        initComponents();
+        initComponents(); 
     }
+    
+    public QuestionnaireGUI(String e, String p) {
+        initComponents(); 
+        email = e;
+        password = p;
+    }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -26,14 +40,6 @@ public class QuestionnaireGUI extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
@@ -53,33 +59,19 @@ public class QuestionnaireGUI extends javax.swing.JPanel {
         jCheckBox15 = new javax.swing.JCheckBox();
         jCheckBox16 = new javax.swing.JCheckBox();
         jCheckBox17 = new javax.swing.JCheckBox();
+        jLabel1 = new javax.swing.JLabel();
         jCheckBox18 = new javax.swing.JCheckBox();
+        jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
-        jLabel1.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
-        jLabel1.setText("Assessment Profile Questions");
-
-        jLabel2.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
-        jLabel2.setText("Do you mind Clutter in Room?");
-
-        jLabel3.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
-        jLabel3.setText("Do you mind alarm clocks?");
-
-        jLabel4.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
-        jLabel4.setText("Do you mind loud visitors?");
-
-        jLabel5.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
-        jLabel5.setText("Can you sleep with lights on?");
-
-        jLabel6.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
-        jLabel6.setText("Do you mind noise past Midnight?");
-
-        jLabel7.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
-        jLabel7.setText("Do you consider yourself as an introvert?");
-
-        jLabel8.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
-        jLabel8.setText("Do you consider yourself as an extrovert?");
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel9.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jLabel9.setText("Do you like to go to parties?");
@@ -97,63 +89,182 @@ public class QuestionnaireGUI extends javax.swing.JPanel {
 
         jCheckBox2.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox2.setText("No");
+        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox2ActionPerformed(evt);
+            }
+        });
 
         jCheckBox3.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox3.setText("Yes");
+        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox3ActionPerformed(evt);
+            }
+        });
 
         jCheckBox4.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox4.setText("No");
+        jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox4ActionPerformed(evt);
+            }
+        });
 
         jCheckBox5.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox5.setText("Yes");
+        jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox5ActionPerformed(evt);
+            }
+        });
 
         jCheckBox6.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox6.setText("No");
+        jCheckBox6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox6ActionPerformed(evt);
+            }
+        });
 
         jCheckBox7.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox7.setText("Yes");
+        jCheckBox7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox7ActionPerformed(evt);
+            }
+        });
 
         jCheckBox8.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox8.setText("No");
+        jCheckBox8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox8ActionPerformed(evt);
+            }
+        });
 
         jCheckBox9.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox9.setText("Yes");
+        jCheckBox9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox9ActionPerformed(evt);
+            }
+        });
 
         jCheckBox10.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox10.setText("No");
+        jCheckBox10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox10ActionPerformed(evt);
+            }
+        });
 
         jCheckBox11.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox11.setText("Yes");
+        jCheckBox11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox11ActionPerformed(evt);
+            }
+        });
 
         jCheckBox12.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox12.setText("No");
+        jCheckBox12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox12ActionPerformed(evt);
+            }
+        });
 
         jCheckBox13.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox13.setText("Yes");
+        jCheckBox13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox13ActionPerformed(evt);
+            }
+        });
 
         jCheckBox14.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox14.setText("No");
+        jCheckBox14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox14ActionPerformed(evt);
+            }
+        });
 
         jCheckBox15.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox15.setText("Yes");
+        jCheckBox15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox15ActionPerformed(evt);
+            }
+        });
 
         jCheckBox16.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox16.setText("No");
+        jCheckBox16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox16ActionPerformed(evt);
+            }
+        });
 
         jCheckBox17.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox17.setText("Yes");
+        jCheckBox17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox17ActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
+        jLabel1.setText("Assessment Profile Questions");
 
         jCheckBox18.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jCheckBox18.setText("No");
+        jCheckBox18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox18ActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
+        jLabel2.setText("Do you mind Clutter in Room?");
 
         jButton1.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jButton1.setText("SAVE");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
+        jLabel3.setText("Do you mind alarm clocks?");
 
         jButton2.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jButton2.setText("BACK");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        jLabel4.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
+        jLabel4.setText("Do you mind loud visitors?");
+
+        jLabel5.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
+        jLabel5.setText("Can you sleep with lights on?");
+
+        jLabel6.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
+        jLabel6.setText("Do you mind noise past Midnight?");
+
+        jLabel7.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
+        jLabel7.setText("Do you consider yourself as an introvert?");
+
+        jLabel8.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
+        jLabel8.setText("Do you consider yourself as an extrovert?");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -276,14 +387,204 @@ public class QuestionnaireGUI extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         // TODO add your handling code here:
+        A = "Y";
+        jCheckBox2.setSelected(false);
+        jCheckBox1.setSelected(true);
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
+    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+        // TODO add your handling code here:
+        A = "N";
+        jCheckBox1.setSelected(false);
+        jCheckBox2.setSelected(true);
+    }//GEN-LAST:event_jCheckBox2ActionPerformed
+
+    private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
+        // TODO add your handling code here:
+
+        B = "Y";
+        jCheckBox4.setSelected(false);
+        jCheckBox3.setSelected(true);
+    }//GEN-LAST:event_jCheckBox3ActionPerformed
+
+    private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
+        // TODO add your handling code here:
+        B = "N";
+        jCheckBox3.setSelected(false);
+        jCheckBox4.setSelected(true);
+    }//GEN-LAST:event_jCheckBox4ActionPerformed
+
+    private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
+        // TODO add your handling code here:
+        C = "Y";
+        jCheckBox6.setSelected(false);
+        jCheckBox5.setSelected(true);
+    }//GEN-LAST:event_jCheckBox5ActionPerformed
+
+    private void jCheckBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox6ActionPerformed
+        // TODO add your handling code here:
+        C = "N";
+        jCheckBox5.setSelected(false);
+        jCheckBox6.setSelected(true);
+    }//GEN-LAST:event_jCheckBox6ActionPerformed
+
+    private void jCheckBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox7ActionPerformed
+        // TODO add your handling code here:
+        D = "Y";
+        jCheckBox8.setSelected(false);
+        jCheckBox7.setSelected(true);
+    }//GEN-LAST:event_jCheckBox7ActionPerformed
+
+    private void jCheckBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox8ActionPerformed
+        // TODO add your handling code here:
+        D = "N";
+        jCheckBox7.setSelected(false);
+        jCheckBox8.setSelected(true);
+    }//GEN-LAST:event_jCheckBox8ActionPerformed
+
+    private void jCheckBox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox9ActionPerformed
+        // TODO add your handling code here:
+        E = "Y";
+        jCheckBox10.setSelected(false);
+        jCheckBox9.setSelected(true);
+    }//GEN-LAST:event_jCheckBox9ActionPerformed
+
+    private void jCheckBox10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox10ActionPerformed
+        // TODO add your handling code here:
+        E = "N";
+        jCheckBox9.setSelected(false);
+        jCheckBox10.setSelected(true);
+    }//GEN-LAST:event_jCheckBox10ActionPerformed
+
+    private void jCheckBox11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox11ActionPerformed
+        // TODO add your handling code here:
+        F = "Y";
+        jCheckBox12.setSelected(false);
+        jCheckBox11.setSelected(true);
+    }//GEN-LAST:event_jCheckBox11ActionPerformed
+
+    private void jCheckBox12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox12ActionPerformed
+        // TODO add your handling code here:
+        F = "N";
+        jCheckBox11.setSelected(false);
+        jCheckBox12.setSelected(true);
+    }//GEN-LAST:event_jCheckBox12ActionPerformed
+
+    private void jCheckBox13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox13ActionPerformed
+        // TODO add your handling code here:
+        G = "Y";
+        jCheckBox14.setSelected(false);
+        jCheckBox13.setSelected(true);
+    }//GEN-LAST:event_jCheckBox13ActionPerformed
+
+    private void jCheckBox14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox14ActionPerformed
+        // TODO add your handling code here:
+        G = "N";
+        jCheckBox13.setSelected(false);
+        jCheckBox14.setSelected(true);
+    }//GEN-LAST:event_jCheckBox14ActionPerformed
+
+    private void jCheckBox15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox15ActionPerformed
+        // TODO add your handling code here:
+        H = "Y";
+        jCheckBox16.setSelected(false);
+        jCheckBox15.setSelected(true);
+    }//GEN-LAST:event_jCheckBox15ActionPerformed
+
+    private void jCheckBox16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox16ActionPerformed
+        // TODO add your handling code here:
+        H = "N";
+        jCheckBox15.setSelected(false);
+        jCheckBox16.setSelected(true);
+    }//GEN-LAST:event_jCheckBox16ActionPerformed
+
+    private void jCheckBox17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox17ActionPerformed
+        // TODO add your handling code here:
+        I = "Y";
+        jCheckBox18.setSelected(false);
+        jCheckBox17.setSelected(true);
+    }//GEN-LAST:event_jCheckBox17ActionPerformed
+
+    private void jCheckBox18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox18ActionPerformed
+        // TODO add your handling code here:
+        I = "N";
+        jCheckBox17.setSelected(false);
+        jCheckBox18.setSelected(true);
+    }//GEN-LAST:event_jCheckBox18ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Connection conn = null;
+        Statement  stmt = null;
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            String url = "jdbc:mysql://104.197.99.28:3306/room";
+            conn = DriverManager.getConnection(url, "root", "123ppp");  // Get a connection from the pool
+            stmt = conn.createStatement();
+            String f = "delete from questions where id = (select id from students where email = '"+email+"')";
+            String g = "insert into questions (A,B,C,D,E,F,G,H,I,id) values  ('"+A+"','"+B+"','"+C+"','"+D+"','"+E+"','"+F+"','"+G+"','"+H+"','"+I+"',(select id from students where email = '"+email+"'))";
+            stmt.execute(f);
+            
+            if(!stmt.execute(g)){
+                JOptionPane.showMessageDialog(null, "Success!");
+                this.dispose();
+            }
+            
+        }catch(Exception e){
+        
+        }
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(QuestionnaireGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(QuestionnaireGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(QuestionnaireGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(QuestionnaireGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new QuestionnaireGUI().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

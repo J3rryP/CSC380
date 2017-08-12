@@ -6,13 +6,20 @@
 
 /**
  *
- * @author Jeremiah
+ * @author Jeremiah & dborelli
  */
 public class MainMenuGUI extends javax.swing.JFrame {
 
     /**
      * Creates new form MainMenuGUI
      */
+    String email , password;
+    public MainMenuGUI(String e, String p) {
+        initComponents();
+        email = e;
+        password = p;
+    }
+    
     public MainMenuGUI() {
         initComponents();
     }
@@ -45,6 +52,7 @@ public class MainMenuGUI extends javax.swing.JFrame {
 
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
@@ -96,7 +104,7 @@ public class MainMenuGUI extends javax.swing.JFrame {
                     .addComponent(jLabel8)
                     .addComponent(jButton2)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(122, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -126,6 +134,9 @@ public class MainMenuGUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
+        QuestionnaireGUI q = new QuestionnaireGUI(email, password);
+        q.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

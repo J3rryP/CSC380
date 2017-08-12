@@ -6,7 +6,7 @@
 
 /**
  *
- * @author Jeremiah
+ * @author Jeremiah & dborelli
  */
 
 //import java.awt.BorderLayout;
@@ -153,8 +153,8 @@ public class LogInGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         Student s = new Student();
         try {
-            if (s.find(nameField.getText(),passwordField.getText())) {
-                MainMenuGUI m = new MainMenuGUI();
+            if (s.find(nameField.getText(),passwordField.getText())!=null) {
+                MainMenuGUI m = new MainMenuGUI(s.getEmail(),s.getPassword());
                 m.setVisible(true);
                 this.dispose();
             }else {
