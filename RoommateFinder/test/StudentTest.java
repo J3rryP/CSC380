@@ -51,6 +51,13 @@ class StudentTest {
         assertTrue(s.getUsername().equals("climatehack"));
     }
 
+    @org.junit.jupiter.api.Test
+    void setName() {
+        Student s = new Student();
+        s.setName("climatehack");
+        assertTrue(s.getName().equals("climatehack"));
+    }
+
 
     @org.junit.jupiter.api.Test
     void setYear() {
