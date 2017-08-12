@@ -14,6 +14,7 @@ import javax.swing.*;
         
 public class LogInGUI extends javax.swing.JFrame {
     
+    String email , password;
     
     /**
      * Creates new form LogIn
@@ -40,7 +41,7 @@ public class LogInGUI extends javax.swing.JFrame {
         logInButton = new javax.swing.JButton();
         signUpButton = new javax.swing.JButton();
         nameField = new javax.swing.JTextField();
-        passwordField = new javax.swing.JTextField();
+        passwordField = new javax.swing.JPasswordField();
         appNameLabel = new javax.swing.JLabel();
 
         jTextField2.setText("jTextField2");
@@ -59,7 +60,7 @@ public class LogInGUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         usernameLabel.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
-        usernameLabel.setText("USERNAME");
+        usernameLabel.setText("EMAIL");
 
         passwordLabel.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         passwordLabel.setText("PASSWORD");
@@ -150,6 +151,20 @@ public class LogInGUI extends javax.swing.JFrame {
 
     private void logInButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logInButtonActionPerformed
         // TODO add your handling code here:
+        Student s = new Student();
+        try {
+            if (s.find(nameField.getText(),passwordField.getText())) {
+                MainMenuGUI m = new MainMenuGUI();
+                m.setVisible(true);
+                this.dispose();
+            }else {
+                JOptionPane.showMessageDialog(null, "Please check credentials and try again");
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
+        
     }//GEN-LAST:event_logInButtonActionPerformed
 
     
@@ -179,10 +194,12 @@ public class LogInGUI extends javax.swing.JFrame {
 
     private void nameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameFieldActionPerformed
         // TODO add your handling code here:
+        email = nameField.getText();
     }//GEN-LAST:event_nameFieldActionPerformed
 
     private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed
         // TODO add your handling code here:
+        password = passwordField.getText();
     }//GEN-LAST:event_passwordFieldActionPerformed
 
     /**

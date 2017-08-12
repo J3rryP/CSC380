@@ -1,46 +1,37 @@
+
 /**
  * Created by david yeboah on 7/21/17.
  */
-
+import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Date;
 import java.util.Calendar;
 import java.util.Objects;
+import java.io.*;
 
 public class Student {
 
     protected long id;
     protected String name;
-<<<<<<< HEAD
-=======
-    protected String username;
->>>>>>> ec0d7348a463d1289b22ea0f7aa011304e9393b8
     protected String password;
     protected String lastLogin;
     protected String email;
     protected String gender;
     protected String year;
-    protected String description;
+    protected String building;
     protected String major;
     protected String language;
 
     protected ArrayList<Student> matches;
     School schools = new School("");
 
-    public Student(){
+    public Student() {
         matches = new ArrayList<Student>();
     }
-    
-<<<<<<< HEAD
-    
-    public Student( String u , String p , String e , String y , String g , String m, String l){
+
+    public Student(String u, String p, String e, String y, String g, String m, String l, String b) {
         this.name = u;
-=======
-    public Student(long i , String n, String u , String p , boolean a , String e , String y , String g , String d, String m, String l){
-        this.id = i;
-        this.name = n;
-        this.username = u;
->>>>>>> ec0d7348a463d1289b22ea0f7aa011304e9393b8
         this.password = p;
         this.lastLogin = Calendar.getInstance().getTime().toString();
         this.email = e;
@@ -48,9 +39,9 @@ public class Student {
         this.year = y;
         this.major = m;
         this.language = l;
+        this.building = b;
         matches = new ArrayList<Student>();
     }
-   
 
     public void setId(long id) {
         this.id = id;
@@ -59,12 +50,12 @@ public class Student {
     public void setEmail(String email) {
         this.email = email;
     }
-    
-    public void setName(String name){
+
+    public void setName(String name) {
         this.name = name;
-        
+
     }
-    
+
     public long getId() {
         return id;
     }
@@ -72,22 +63,17 @@ public class Student {
     public String getEmail() {
         return email;
     }
-    
-    public String getName(){
+
+    public String getName() {
         return name;
     }
 
-  
     public String getLastLogin() {
         return lastLogin;
     }
 
     public String getPassword() {
         return password;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public void setLastLogin(Date lastLogin) {
@@ -98,10 +84,6 @@ public class Student {
         this.password = password;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getYear() {
         return year;
     }
@@ -110,12 +92,12 @@ public class Student {
         this.year = year;
     }
 
-    public String getDescription() {
-        return description;
+    public String getBuilding() {
+        return building;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setBuilding(String building) {
+        this.building = building;
     }
 
     public void setGender(String gender) {
@@ -150,31 +132,86 @@ public class Student {
         this.matches = matches;
     }
 
-    public boolean addMatches(Student s){
+    public boolean addMatches(Student s) {
         return this.matches.add(s);
     }
 
-    public boolean removeMatches(Student s){
+    public boolean removeMatches(Student s) {
         return this.matches.remove(s);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(this.id,this.email);
+        return Objects.hash(this.id, this.email);
     }
 
     void setSchool(School schools) {
-        
+
         this.schools = schools;
 
     }
-    public String getSchool(){
+
+    public String getSchool() {
+
+        return schools.getName();
+    }
+
+    public boolean save() throws IOException {
+        Connection conn = null;
+        Statement  stmt = null;
         
-     return schools.getName();   
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            String url = "jdbc:mysql://104.197.99.28:3306/room";
+            conn = DriverManager.getConnection(url, "root", "123ppp");  // Get a connection from the pool
+            stmt = conn.createStatement();
+            String f = "select * from students where strcmp(students.email,'"+this.email+"')=0";
+            
+            ResultSet rs = null;
+            rs = stmt.executeQuery(f);
+            
+            if (!rs.next()) {
+                String sql = "insert into students values('"+this.name+"','"+this.email+"','"+this.year+"','"+this.gender+"','"+this.major+"','"+this.language+"','"+this.building+"',null,null,null,null,'"+this.password+"');";
+                stmt.execute(sql);
+                return true;
+            } else {
+                System.out.println("User already exists");
+                return false;
+            }
+        }catch(Exception se){
+            se.printStackTrace();
+        }
+        return false;
     }
     
-    public void save(){
-    
+    public boolean find(String n , String p) throws IOException{
+        Connection conn = null;
+        Statement  stmt = null;
+        
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            String url = "jdbc:mysql://104.197.99.28:3306/room";
+            conn = DriverManager.getConnection(url, "root", "123ppp");  // Get a connection from the pool
+            stmt = conn.createStatement();
+            String f = "select * from students where strcmp(students.email,'"+n+"')=0 and strcmp(students.password,'"+p+"')=0";
+            System.out.println(f);
+            ResultSet rs = null;
+            rs = stmt.executeQuery(f);
+            
+            if (rs.next()) {
+                this.name = rs.getString("name");
+                this.email = rs.getString("email");
+                this.gender = rs.getString("gender");
+                this.year = rs.getString("year");
+                return true;
+            } else {
+                
+                return false;
+            }
+        }catch(Exception se){
+            se.printStackTrace();
+        }
+        return false;
     }
-    
-    }
+
+}

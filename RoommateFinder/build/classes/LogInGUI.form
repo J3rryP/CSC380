@@ -109,7 +109,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Courier" size="13" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="USERNAME"/>
+        <Property name="text" type="java.lang.String" value="EMAIL"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="passwordLabel">
@@ -161,6 +161,9 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="passwordFieldActionPerformed"/>
       </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JPasswordField()"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="appNameLabel">
       <Properties>

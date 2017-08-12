@@ -8,18 +8,24 @@
  *
  * @author Jeremiah
  */
-public class SignUpGUI extends javax.swing.JFrame {
-    
-    
-    Student st = new Student();
 
-    String name , gender , major , language , password , email , year ;
+
+import javax.swing.JOptionPane;
+
+public class SignUpGUI extends javax.swing.JFrame {
+
+    String name , gender , major , language , password , email , year ,building;
     
+    
+            
     /**
      * Creates new form SignUpGUI
      */
     public SignUpGUI() {
         initComponents();
+        major = "Comp Sci";
+        language = "English";
+        building = "Hart";
     }
 
     /**
@@ -78,7 +84,6 @@ public class SignUpGUI extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jLabel7.setText("Building Preference:");
 
-<<<<<<< HEAD
         nameField.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
 
         emailField.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
@@ -89,14 +94,6 @@ public class SignUpGUI extends javax.swing.JFrame {
         });
 
         freshmanCheckBox.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
-=======
-        nameField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nameFieldActionPerformed(evt);
-            }
-        });
-
->>>>>>> ec0d7348a463d1289b22ea0f7aa011304e9393b8
         freshmanCheckBox.setText("Freshman");
         freshmanCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,6 +159,11 @@ public class SignUpGUI extends javax.swing.JFrame {
 
         bComboBox.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         bComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Hart", "Funnelle", "Oneida", "Seneca" }));
+        bComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bComboBoxActionPerformed(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jLabel8.setText("Sign Up Form");
@@ -182,17 +184,8 @@ public class SignUpGUI extends javax.swing.JFrame {
             }
         });
 
-<<<<<<< HEAD
         jLabel9.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jLabel9.setText("Password:");
-=======
-        signUpButton.setText("Sign Up");
-        signUpButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                signUpButtonActionPerformed(evt);
-            }
-        });
->>>>>>> ec0d7348a463d1289b22ea0f7aa011304e9393b8
 
         passField1.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         passField1.addActionListener(new java.awt.event.ActionListener() {
@@ -221,7 +214,7 @@ public class SignUpGUI extends javax.swing.JFrame {
                                         .addComponent(mCheckBox)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(fCheckBox))
-                                    .addComponent(mComboBox, 0, 103, Short.MAX_VALUE)
+                                    .addComponent(mComboBox, 0, 134, Short.MAX_VALUE)
                                     .addComponent(lComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel7)
@@ -309,15 +302,20 @@ public class SignUpGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-<<<<<<< HEAD
     private void mCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mCheckBoxActionPerformed
         // TODO add your handling code here:
          gender = "M";
+        mCheckBox.setSelected(true);
+        fCheckBox.setSelected(false);
     }//GEN-LAST:event_mCheckBoxActionPerformed
 
     private void freshmanCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_freshmanCheckBoxActionPerformed
         // TODO add your handling code here:
          year = "freshman";
+         freshmanCheckBox.setSelected(true);
+         sophomoreCheckBox.setSelected(false);
+         juniorCheckBox.setSelected(false);
+         seniorCheckBox.setSelected(false);
     }//GEN-LAST:event_freshmanCheckBoxActionPerformed
 
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
@@ -332,12 +330,17 @@ public class SignUpGUI extends javax.swing.JFrame {
 
     private void signUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signUpButtonActionPerformed
         // TODO add your handling code here:
-        name = nameField.getText();
+         name = nameField.getText();
          email = emailField.getText();
          password = passField1.getText();
          
-         Student s = new Student(name,password,email, year,gender,major,language);
-         s.save(); //if successful , dispose
+         Student s = new Student(name,password,email, year,gender,major,language,building);
+         try {
+            if(s.save()) this.dispose();
+            else JOptionPane.showMessageDialog(null, "Please check credentials and try again");
+         }catch(Exception e){
+             
+         }
         
     }//GEN-LAST:event_signUpButtonActionPerformed
 
@@ -347,102 +350,53 @@ public class SignUpGUI extends javax.swing.JFrame {
 
     private void passField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passField1ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_passField1ActionPerformed
 
     private void sophomoreCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sophomoreCheckBoxActionPerformed
         // TODO add your handling code here:
          year = "sophomore";
-=======
-    private void freshmanCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_freshmanCheckBoxActionPerformed
-    // TODO add your handling code here:
-        
-         freshmanCheckBox.setSelected(true);
-         sophomoreCheckBox.setSelected(false);
-         juniorCheckBox.setSelected(false);
-         seniorCheckBox.setSelected(false);
-                    
-                    
-                
-        
-    }//GEN-LAST:event_freshmanCheckBoxActionPerformed
-
-    private void sophomoreCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sophomoreCheckBoxActionPerformed
-        // TODO add your handling code here:
-        
          freshmanCheckBox.setSelected(false);
          sophomoreCheckBox.setSelected(true);
          juniorCheckBox.setSelected(false);
          seniorCheckBox.setSelected(false);
-        
->>>>>>> ec0d7348a463d1289b22ea0f7aa011304e9393b8
     }//GEN-LAST:event_sophomoreCheckBoxActionPerformed
 
     private void juniorCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_juniorCheckBoxActionPerformed
         // TODO add your handling code here:
-<<<<<<< HEAD
          year = "junior";
-=======
-        
-        freshmanCheckBox.setSelected(false);
+         freshmanCheckBox.setSelected(false);
          sophomoreCheckBox.setSelected(false);
          juniorCheckBox.setSelected(true);
          seniorCheckBox.setSelected(false);
-        
->>>>>>> ec0d7348a463d1289b22ea0f7aa011304e9393b8
     }//GEN-LAST:event_juniorCheckBoxActionPerformed
 
     private void seniorCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seniorCheckBoxActionPerformed
         // TODO add your handling code here:
-<<<<<<< HEAD
          year = "senior";
+         freshmanCheckBox.setSelected(false);
+         sophomoreCheckBox.setSelected(false);
+         juniorCheckBox.setSelected(false);
+         seniorCheckBox.setSelected(true);
     }//GEN-LAST:event_seniorCheckBoxActionPerformed
 
     private void fCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fCheckBoxActionPerformed
         // TODO add your handling code here:
          gender = "F";
+         mCheckBox.setSelected(false);
+        fCheckBox.setSelected(true);
     }//GEN-LAST:event_fCheckBoxActionPerformed
 
     private void lComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lComboBoxActionPerformed
         // TODO add your handling code here:
         language = (String) lComboBox.getSelectedItem();
     }//GEN-LAST:event_lComboBoxActionPerformed
-=======
-        
-        freshmanCheckBox.setSelected(false);
-         sophomoreCheckBox.setSelected(false);
-         juniorCheckBox.setSelected(false);
-         seniorCheckBox.setSelected(true);
-    }//GEN-LAST:event_seniorCheckBoxActionPerformed
 
-    private void mCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mCheckBoxActionPerformed
+    private void bComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bComboBoxActionPerformed
         // TODO add your handling code here:
+        building = (String) mComboBox.getSelectedItem();
         
-        mCheckBox.setSelected(true);
-        fCheckBox.setSelected(false);
-        
-    }//GEN-LAST:event_mCheckBoxActionPerformed
-
-    private void fCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fCheckBoxActionPerformed
-        // TODO add your handling code here:
-        
-        mCheckBox.setSelected(false);
-        fCheckBox.setSelected(true);
-    }//GEN-LAST:event_fCheckBoxActionPerformed
-
-    private void nameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameFieldActionPerformed
-        // TODO add your handling code here:
-        
-        
-        
-    }//GEN-LAST:event_nameFieldActionPerformed
-
-    private void signUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signUpButtonActionPerformed
-        // TODO add your handling code here:
-        
-        
-        
-    }//GEN-LAST:event_signUpButtonActionPerformed
->>>>>>> ec0d7348a463d1289b22ea0f7aa011304e9393b8
+    }//GEN-LAST:event_bComboBoxActionPerformed
 
     /**
      * @param args the command line arguments

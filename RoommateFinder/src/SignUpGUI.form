@@ -41,7 +41,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="fCheckBox" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="mComboBox" alignment="0" pref="103" max="32767" attributes="0"/>
+                                  <Component id="mComboBox" alignment="0" pref="134" max="32767" attributes="0"/>
                                   <Component id="lComboBox" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -211,17 +211,11 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="nameField">
-<<<<<<< HEAD
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Courier" size="13" style="0"/>
         </Property>
       </Properties>
-=======
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nameFieldActionPerformed"/>
-      </Events>
->>>>>>> ec0d7348a463d1289b22ea0f7aa011304e9393b8
     </Component>
     <Component class="javax.swing.JTextField" name="emailField">
       <Properties>
@@ -334,6 +328,9 @@
           <Connection code="new javax.swing.DefaultComboBoxModel(new String[] { &quot;Hart&quot;, &quot;Funnelle&quot;, &quot;Oneida&quot;, &quot;Seneca&quot; })" type="code"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bComboBoxActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
