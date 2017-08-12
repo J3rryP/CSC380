@@ -394,7 +394,7 @@ public class SignUpGUI extends javax.swing.JFrame {
 
     private void bComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bComboBoxActionPerformed
         // TODO add your handling code here:
-        building = (String) mComboBox.getSelectedItem();
+        building = (String) bComboBox.getSelectedItem();
         
     }//GEN-LAST:event_bComboBoxActionPerformed
 

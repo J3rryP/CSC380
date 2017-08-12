@@ -206,6 +206,7 @@ public class Student {
                 this.building = rs.getString("building");
                 this.language = rs.getString("language");
                 this.major = rs.getString("major");
+                this.password = rs.getString("password");
                 this.id = rs.getInt("id");
                 return this;
             } else {

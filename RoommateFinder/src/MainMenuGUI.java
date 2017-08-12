@@ -15,9 +15,10 @@ public class MainMenuGUI extends javax.swing.JFrame {
      */
     String email , password;
     public MainMenuGUI(String e, String p) {
-        initComponents();
         email = e;
         password = p;
+        initComponents();
+        
     }
     
     public MainMenuGUI() {
@@ -55,6 +56,20 @@ public class MainMenuGUI extends javax.swing.JFrame {
         jTextArea1.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
+        Student s  = new Student();
+        System.out.println(email+" "+password);
+        try{
+            s.find(email,password);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
+        jTextArea1.setText("NAME: "+ s.getName()+"\n");
+        jTextArea1.append("GENDER: "+ s.getGender()+"\n");
+        jTextArea1.append("MAJOR: "+ s.getMajor()+"\n");
+        jTextArea1.append("ID: "+ s.getId()+"\n");
+        jTextArea1.append("LANGUAGE: "+ s.getLanguage()+"\n");
+        jTextArea1.append("BUILDING: "+ s.getBuilding() +"\n");
 
         jButton1.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jButton1.setText("QUESTIONNAIRE");
@@ -95,16 +110,19 @@ public class MainMenuGUI extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jButton1))
-                .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9))
-                .addGap(44, 44, 44)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addComponent(jLabel9))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8)
                     .addComponent(jButton2)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
