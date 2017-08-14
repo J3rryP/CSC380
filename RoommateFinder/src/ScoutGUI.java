@@ -157,13 +157,36 @@ public class ScoutGUI extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         //skip and never
+        this.buttonpressActionPerformed(evt);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         //match and update
+        this.buttonpressActionPerformed(evt);
+  
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void buttonpressActionPerformed(java.awt.event.ActionEvent evt) { 
+       
+       
+       // int i = 0;
+        
+        
+        
+        for (String strin : strings)  
+        
+        
+        {   
+            
+            if (jButton2.isSelected() || jButton1.isSelected())
+            {
+            jTextArea1.setText(strin);
+            }       
+           
+        }
+        
+    }
     /**
      * @param args the command line arguments
      */
