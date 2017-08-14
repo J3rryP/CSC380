@@ -14,6 +14,7 @@ public class MainMenuGUI extends javax.swing.JFrame {
      * Creates new form MainMenuGUI
      */
     String email , password;
+    int id;
     public MainMenuGUI(String e, String p) {
         email = e;
         password = p;
@@ -44,6 +45,7 @@ public class MainMenuGUI extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,11 +54,12 @@ public class MainMenuGUI extends javax.swing.JFrame {
         jLabel1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 100, 0)));
 
         jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
+        jTextArea1.setColumns(2);
         jTextArea1.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
-        Student s  = new Student();
+
+         Student s  = new Student();
         System.out.println(email+" "+password);
         try{
             s.find(email,password);
@@ -70,7 +73,7 @@ public class MainMenuGUI extends javax.swing.JFrame {
         jTextArea1.append("ID: "+ s.getId()+"\n");
         jTextArea1.append("LANGUAGE: "+ s.getLanguage()+"\n");
         jTextArea1.append("BUILDING: "+ s.getBuilding() +"\n");
-
+        id = (int)s.getId();
         jButton1.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jButton1.setText("QUESTIONNAIRE");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -99,6 +102,14 @@ public class MainMenuGUI extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jLabel9.setText("STUDENT'S INFO");
 
+        jButton4.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
+        jButton4.setText("SCOUT");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -116,7 +127,9 @@ public class MainMenuGUI extends javax.swing.JFrame {
                         .addComponent(jLabel9))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton4)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8)
@@ -138,7 +151,8 @@ public class MainMenuGUI extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton2)
-                            .addComponent(jButton1)))
+                            .addComponent(jButton1)
+                            .addComponent(jButton4)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -156,6 +170,14 @@ public class MainMenuGUI extends javax.swing.JFrame {
         QuestionnaireGUI q = new QuestionnaireGUI(email, password);
         q.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        ScoutGUI sc = new ScoutGUI(id);
+        sc.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+             
 
     /**
      * @param args the command line arguments
@@ -196,6 +218,7 @@ public class MainMenuGUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
