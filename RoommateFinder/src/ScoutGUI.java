@@ -12,12 +12,18 @@
 import java.sql.*;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class ScoutGUI extends javax.swing.JFrame {
 
     /**
      * Creates new form ScoutGUI
      */
+    List<String> strings = Arrays.asList("Do you mind Clutter in Room?", "Do you mind alarm clocks?","Do you mind loud visitors?","Can you sleep with lights on?","Do you mind noise past Midnight?",
+    "Do you consider yourself as an introvert?", "Do you consider yourself as an extrovert?","Do you like to go to parties?","Do you drink alcoholic beverages?(21+)", "DONE!");
+    
+    
     ArrayList<Student> obj = new ArrayList<>();
     String name , email , gender , major , year , language , building ;
     int id , i;
