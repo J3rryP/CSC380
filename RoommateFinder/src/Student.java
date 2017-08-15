@@ -2,6 +2,8 @@
 /**
  * Created by david yeboah on 7/21/17.
  */
+import java.awt.Image;
+import java.awt.image.BufferedImage;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,19 +11,21 @@ import java.util.Date;
 import java.util.Calendar;
 import java.util.Objects;
 import java.io.*;
+import javax.swing.ImageIcon;
 
 public class Student {
 
     protected long id;
     protected String name;
     protected String password;
-    protected String lastLogin = "fish";
+    protected String lastLogin;
     protected String email;
     protected String gender;
     protected String year;
     protected String building;
     protected String major;
     protected String language;
+    protected ImageIcon img;
 
     protected ArrayList<Student> matches;
     School schools = new School("");
@@ -30,7 +34,7 @@ public class Student {
         matches = new ArrayList<Student>();
     }
 
-    public Student(String u, String p, String e, String y, String g, String m, String l, String b) {
+    public Student(String u, String p, String e, String y, String g, String m, String l, String b, ImageIcon v) {
         this.name = u;
         this.password = p;
         this.lastLogin = Calendar.getInstance().getTime().toString();
@@ -40,6 +44,7 @@ public class Student {
         this.major = m;
         this.language = l;
         this.building = b;
+        this.img = v;
         matches = new ArrayList<Student>();
     }
 
@@ -58,6 +63,14 @@ public class Student {
 
     public long getId() {
         return id;
+    }
+    
+    public void setImage(ImageIcon img){
+        this.img = img;
+    }
+    
+    public ImageIcon getImage(){
+        return img;
     }
 
     public String getEmail() {
@@ -208,7 +221,6 @@ public class Student {
                 this.major = rs.getString("major");
                 this.password = rs.getString("password");
                 this.id = rs.getInt("id");
-                this.lastLogin = rs.getString("matches");
                 return this;
             } else {
                 
@@ -218,45 +230,6 @@ public class Student {
             se.printStackTrace();
         }
         return null;
-    }
-    
-    public String [] mtches(String a []){
-        Connection conn = null;
-        Statement  stmt = null;
-        int index  = 0;
-        String [] results = new String[a.length];
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://104.197.99.28:3306/room";
-            conn = DriverManager.getConnection(url, "root", "123ppp");  // Get a connection from the pool
-            stmt = conn.createStatement();
-            
-            while(index < a.length){
-                String f = "select * from students where id = "+a[index];
-                System.out.println(f);
-                ResultSet rs = null;
-                rs = stmt.executeQuery(f);
-            
-                if (rs.next()) { //not all info about students are included .
-                    String n = rs.getString("name");
-                    results[index]= n;
-                } 
-                index++;
-            }
-            
-        }catch(Exception se){
-            se.printStackTrace();
-        }
-        return results;
-    }
-    
-    public String [] check(){
-       String [] q = {"No matches yet"};
-        if(lastLogin!= null) {
-                String [] ids = lastLogin.split(";");
-                q = mtches(ids);
-        }
-        return q;
     }
 
 }

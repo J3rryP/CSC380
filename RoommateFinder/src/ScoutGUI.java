@@ -15,32 +15,24 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
-import javax.swing.JOptionPane;
 
 public class ScoutGUI extends javax.swing.JFrame {
 
     /**
      * Creates new form ScoutGUI
      */
-    List<String> strings = Arrays.asList("Do you mind Clutter in Room?", "Do you mind alarm clocks?","Do you mind loud visitors?","Can you sleep with lights on?","Do you mind noise past Midnight?",
-    "Do you consider yourself as an introvert?", "Do you consider yourself as an extrovert?","Do you like to go to parties?","Do you drink alcoholic beverages?(21+)", "DONE!");
     
     
+    ArrayList<Student> obj = new ArrayList<>();
     String name , email , gender , major , year , language , building ;
     int id , i;
     int index;
-    ArrayList<Student> obj = new ArrayList<>();
-    Engine e = new Engine();
     public ScoutGUI() {
         initComponents();
-        
     }
 
     public ScoutGUI(int a) {
         i = a;
-        index = 0;
-        
-        obj = e.all(i);
         initComponents();
 
     }
@@ -81,32 +73,33 @@ public class ScoutGUI extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
-        buttonpressActionPerformed();
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
         panel1.setLayout(panel1Layout);
         panel1Layout.setHorizontalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel1Layout.createSequentialGroup()
-                .addGap(71, 71, 71)
-                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel1Layout.createSequentialGroup()
+                        .addGap(71, 71, 71)
                         .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2)))
-                .addContainerGap(75, Short.MAX_VALUE))
+                        .addGap(94, 94, 94)
+                        .addComponent(jButton2))
+                    .addGroup(panel1Layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
         panel1Layout.setVerticalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -127,32 +120,21 @@ public class ScoutGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         //skip and never
          
-        buttonpressActionPerformed();
+        
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         //match and update
-        int j = e.update(i, id);
-        if(j == 1 ) JOptionPane.showMessageDialog(null, "Congrats! You have a roomie buddy!");
-        buttonpressActionPerformed();
+        
+        
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void buttonpressActionPerformed() { 
        
-        Student s = obj.get(index);
-        
-         jTextArea1.setText("NAME: "+ s.getName()+"\n");
-        jTextArea1.append("GENDER: "+ s.getGender()+"\n");
-       jTextArea1.append("MAJOR: "+ s.getMajor()+"\n");
-       jTextArea1.append("ID: "+ s.getId()+"\n");
-       id = (int) s.getId();
-       jTextArea1.append("LANGUAGE: "+ s.getLanguage()+"\n");
-       jTextArea1.append("BUILDING: "+ s.getBuilding() +"\n");
-         if (index < obj.size()-1) 
-         index++;
+
     }
     /**
      * @param args the command line arguments
