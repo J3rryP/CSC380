@@ -72,6 +72,7 @@ public class ScoutGUI extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
+        jLabel1.setText("BEGIN BY CLICKING YES OR NO");
         jLabel1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(204, 255, 153)));
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
@@ -153,7 +154,8 @@ public class ScoutGUI extends javax.swing.JFrame {
         }
          jLabel1.setText(labelText);
       */
-        
+         
+         
          jLabel1.setText(strings.get(index));
          if (index < strings.size()-1) 
          index++;
