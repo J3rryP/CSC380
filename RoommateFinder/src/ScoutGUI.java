@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
+import javax.swing.JOptionPane;
 
 public class ScoutGUI extends javax.swing.JFrame {
 
@@ -25,16 +26,21 @@ public class ScoutGUI extends javax.swing.JFrame {
     "Do you consider yourself as an introvert?", "Do you consider yourself as an extrovert?","Do you like to go to parties?","Do you drink alcoholic beverages?(21+)", "DONE!");
     
     
-    ArrayList<Student> obj = new ArrayList<>();
     String name , email , gender , major , year , language , building ;
     int id , i;
     int index;
+    ArrayList<Student> obj = new ArrayList<>();
+    Engine e = new Engine();
     public ScoutGUI() {
         initComponents();
+        
     }
 
     public ScoutGUI(int a) {
         i = a;
+        index = 0;
+        
+        obj = e.all(i);
         initComponents();
 
     }
@@ -51,7 +57,8 @@ public class ScoutGUI extends javax.swing.JFrame {
         panel1 = new java.awt.Panel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -71,8 +78,10 @@ public class ScoutGUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
-        jLabel1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(204, 255, 153)));
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+        buttonpressActionPerformed();
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
         panel1.setLayout(panel1Layout);
@@ -80,25 +89,24 @@ public class ScoutGUI extends javax.swing.JFrame {
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel1Layout.createSequentialGroup()
                 .addGap(71, 71, 71)
-                .addComponent(jButton1)
-                .addGap(94, 94, 94)
-                .addComponent(jButton2)
-                .addContainerGap(129, Short.MAX_VALUE))
-            .addGroup(panel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panel1Layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton2)))
+                .addContainerGap(75, Short.MAX_VALUE))
         );
         panel1Layout.setVerticalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel1Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -126,36 +134,24 @@ public class ScoutGUI extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         //match and update
-        
+        int j = e.update(i, id);
+        if(j == 1 ) JOptionPane.showMessageDialog(null, "Congrats! You have a roomie buddy!");
         buttonpressActionPerformed();
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void buttonpressActionPerformed() { 
        
-    /*   
-       // int i = 0;
-        String labelText = "";
+        Student s = obj.get(index);
         
-        Iterator<String> iterator = strings.iterator();
-        
-        
-        //for (String strin : strings)  
-        if (iterator.hasNext())
-        
-        {   
-            
-            //if (jButton2.isSelected() || jButton1.isSelected())
-            //{
-            labelText = labelText +" " + iterator.next();
-            //}       
-          
-        }
-         jLabel1.setText(labelText);
-      */
-        
-         jLabel1.setText(strings.get(index));
-         if (index < strings.size()-1) 
+         jTextArea1.setText("NAME: "+ s.getName()+"\n");
+        jTextArea1.append("GENDER: "+ s.getGender()+"\n");
+       jTextArea1.append("MAJOR: "+ s.getMajor()+"\n");
+       jTextArea1.append("ID: "+ s.getId()+"\n");
+       id = (int) s.getId();
+       jTextArea1.append("LANGUAGE: "+ s.getLanguage()+"\n");
+       jTextArea1.append("BUILDING: "+ s.getBuilding() +"\n");
+         if (index < obj.size()-1) 
          index++;
     }
     /**
@@ -196,7 +192,8 @@ public class ScoutGUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     private java.awt.Panel panel1;
     // End of variables declaration//GEN-END:variables
 }

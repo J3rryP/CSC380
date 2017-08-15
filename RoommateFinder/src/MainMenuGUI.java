@@ -58,15 +58,14 @@ public class MainMenuGUI extends javax.swing.JFrame {
         jTextArea1.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
-
-         Student s  = new Student();
+        Student s  = new Student();
         System.out.println(email+" "+password);
         try{
             s.find(email,password);
         }catch(Exception e){
             e.printStackTrace();
         }
-        
+
         jTextArea1.setText("NAME: "+ s.getName()+"\n");
         jTextArea1.append("GENDER: "+ s.getGender()+"\n");
         jTextArea1.append("MAJOR: "+ s.getMajor()+"\n");
@@ -74,6 +73,7 @@ public class MainMenuGUI extends javax.swing.JFrame {
         jTextArea1.append("LANGUAGE: "+ s.getLanguage()+"\n");
         jTextArea1.append("BUILDING: "+ s.getBuilding() +"\n");
         id = (int)s.getId();
+
         jButton1.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jButton1.setText("QUESTIONNAIRE");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -84,7 +84,9 @@ public class MainMenuGUI extends javax.swing.JFrame {
 
         jList1.setFont(new java.awt.Font("Courier", 0, 12)); // NOI18N
         jList1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            String h = s.getLastLogin();
+            String[] strings = s.check();
+
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });

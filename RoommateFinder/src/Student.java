@@ -15,7 +15,7 @@ public class Student {
     protected long id;
     protected String name;
     protected String password;
-    protected String lastLogin;
+    protected String lastLogin = "fish";
     protected String email;
     protected String gender;
     protected String year;
@@ -208,6 +208,7 @@ public class Student {
                 this.major = rs.getString("major");
                 this.password = rs.getString("password");
                 this.id = rs.getInt("id");
+                this.lastLogin = rs.getString("matches");
                 return this;
             } else {
                 
@@ -217,6 +218,45 @@ public class Student {
             se.printStackTrace();
         }
         return null;
+    }
+    
+    public String [] mtches(String a []){
+        Connection conn = null;
+        Statement  stmt = null;
+        int index  = 0;
+        String [] results = new String[a.length];
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            String url = "jdbc:mysql://104.197.99.28:3306/room";
+            conn = DriverManager.getConnection(url, "root", "123ppp");  // Get a connection from the pool
+            stmt = conn.createStatement();
+            
+            while(index < a.length){
+                String f = "select * from students where id = "+a[index];
+                System.out.println(f);
+                ResultSet rs = null;
+                rs = stmt.executeQuery(f);
+            
+                if (rs.next()) { //not all info about students are included .
+                    String n = rs.getString("name");
+                    results[index]= n;
+                } 
+                index++;
+            }
+            
+        }catch(Exception se){
+            se.printStackTrace();
+        }
+        return results;
+    }
+    
+    public String [] check(){
+       String [] q = {"No matches yet"};
+        if(lastLogin!= null) {
+                String [] ids = lastLogin.split(";");
+                q = mtches(ids);
+        }
+        return q;
     }
 
 }
