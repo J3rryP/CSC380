@@ -24,7 +24,7 @@ public class QuestionnaireGUI extends javax.swing.JFrame {
     
     List<String> strings = Arrays.asList("Do you mind Clutter in Room?", "Do you mind alarm clocks?","Do you mind loud visitors?","Can you sleep with lights on?","Do you mind noise past Midnight?",
     "Do you consider yourself as an introvert?", "Do you consider yourself as an extrovert?","Do you like to go to parties?","Do you drink alcoholic beverages?(21+)", "DONE!");
-    
+    int index = 1;
     String A,B,C,D,E,F,G,H,I, email, password;
     
     
@@ -171,33 +171,49 @@ public class QuestionnaireGUI extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         
-        this.buttonpressActionPerformed(evt);
-        return;
+        buttonpressActionPerformed();
+        
        
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         
-       this.buttonpressActionPerformed(evt);
+       buttonpressActionPerformed();
        
         
         
         
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void buttonpressActionPerformed(java.awt.event.ActionEvent evt) { 
+    private void buttonpressActionPerformed() { 
        
        
+    /*   
        // int i = 0;
+        String labelText = "";
         
-  
-        for (String strin : strings)  
+        Iterator<String> iterator = strings.iterator();
+        
+        
+        //for (String strin : strings)  
+        if (iterator.hasNext())
+        
         {   
-              
-            jLabel6.setText(strin);
-                      
+            
+            //if (jButton2.isSelected() || jButton1.isSelected())
+            //{
+            labelText = labelText +" " + iterator.next();
+            //}       
+          
         }
+         jLabel1.setText(labelText);
+      */
+         
+         
+         jLabel6.setText(strings.get(index));
+         if (index < strings.size()-1) 
+         index++;
         
     }
     
