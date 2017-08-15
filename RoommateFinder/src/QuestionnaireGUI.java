@@ -23,7 +23,7 @@ public class QuestionnaireGUI extends javax.swing.JFrame {
      */
     
     //illegal forward reference
-   // List<String> strings = Arrays.asList(A,B,C,D,E,F,G,H,I,J);
+    // List<String> strings = Arrays.asList(A,B,C,D,E,F,G,H,I,J);
     int index = 1;
     String A = "Do you mind Clutter in Room?";
     String B = "Do you mind alarm clocks?";

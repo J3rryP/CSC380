@@ -10,12 +10,14 @@
  */
 
 
+import java.awt.image.BufferedImage;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 public class SignUpGUI extends javax.swing.JFrame {
 
     String name , gender , major , language , password , email , year ,building;
-    
+    ImageIcon img = null;
     
             
     /**
@@ -334,7 +336,7 @@ public class SignUpGUI extends javax.swing.JFrame {
          email = emailField.getText();
          password = passField1.getText();
          
-         Student s = new Student(name,password,email, year,gender,major,language,building);
+         Student s = new Student(name,password,email, year,gender,major,language,building,img);
          try {
             if(s.save()) this.dispose();
             else JOptionPane.showMessageDialog(null, "Please check credentials and try again");

@@ -2,6 +2,8 @@
 /**
  * Created by david yeboah on 7/21/17.
  */
+import java.awt.Image;
+import java.awt.image.BufferedImage;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +11,7 @@ import java.util.Date;
 import java.util.Calendar;
 import java.util.Objects;
 import java.io.*;
+import javax.swing.ImageIcon;
 
 public class Student {
 
@@ -22,6 +25,7 @@ public class Student {
     protected String building;
     protected String major;
     protected String language;
+    protected ImageIcon img;
 
     protected ArrayList<Student> matches;
     School schools = new School("");
@@ -30,7 +34,7 @@ public class Student {
         matches = new ArrayList<Student>();
     }
 
-    public Student(String u, String p, String e, String y, String g, String m, String l, String b) {
+    public Student(String u, String p, String e, String y, String g, String m, String l, String b, ImageIcon v) {
         this.name = u;
         this.password = p;
         this.lastLogin = Calendar.getInstance().getTime().toString();
@@ -40,6 +44,7 @@ public class Student {
         this.major = m;
         this.language = l;
         this.building = b;
+        this.img = v;
         matches = new ArrayList<Student>();
     }
 
@@ -58,6 +63,14 @@ public class Student {
 
     public long getId() {
         return id;
+    }
+    
+    public void setImage(ImageIcon img){
+        this.img = img;
+    }
+    
+    public ImageIcon getImage(){
+        return img;
     }
 
     public String getEmail() {
