@@ -1,17 +1,3 @@
-
-import java.awt.Image;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.imageio.ImageIO;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JFileChooser;
-import javax.swing.filechooser.FileNameExtensionFilter;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -64,6 +50,7 @@ public class MainMenuGUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
+        jLabel1.setText("   Profile Photo");
         jLabel1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 100, 0)));
 
         jTextArea1.setEditable(false);
@@ -71,7 +58,6 @@ public class MainMenuGUI extends javax.swing.JFrame {
         jTextArea1.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
-<<<<<<< HEAD
         Student s  = new Student();
         System.out.println(email+" "+password);
         try{
@@ -87,8 +73,6 @@ public class MainMenuGUI extends javax.swing.JFrame {
         jTextArea1.append("LANGUAGE: "+ s.getLanguage()+"\n");
         jTextArea1.append("BUILDING: "+ s.getBuilding() +"\n");
         id = (int)s.getId();
-=======
->>>>>>> refs/remotes/origin/master
 
         jButton1.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jButton1.setText("QUESTIONNAIRE");
@@ -113,11 +97,6 @@ public class MainMenuGUI extends javax.swing.JFrame {
 
         jButton3.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jButton3.setText("Choose File...");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
 
         jLabel8.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jLabel8.setText("LIST OF MATCHES");
@@ -199,48 +178,6 @@ public class MainMenuGUI extends javax.swing.JFrame {
         ScoutGUI sc = new ScoutGUI(id);
         sc.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        
-        Student s = new Student();
-        JFileChooser file = new JFileChooser();
-        file.setCurrentDirectory(new File(System.getProperty("user.home")));
-        
-                  //filter the files
-          FileNameExtensionFilter filter = new FileNameExtensionFilter("*.Images", "jpg","gif","png");
-          file.addChoosableFileFilter(filter);
-          int result = file.showSaveDialog(null);
-           //if the user click on save in Jfilechooser
-          if(result == JFileChooser.APPROVE_OPTION){
-              File selectedFile = file.getSelectedFile();
-              String path = selectedFile.getAbsolutePath();
-              System.out.println(path); //test
-              
-              BufferedImage img = null;
-        try {
-            img = ImageIO.read(new File(path));
-            } catch (IOException e) {
-            e.printStackTrace();
-            }
-        
-        Image dimg = img.getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(),
-        Image.SCALE_SMOOTH);
-        
-        
-        ImageIcon icon = new ImageIcon(dimg);
-        
-        s.setImage(icon);
-              
-              
-              jLabel1.setIcon(s.getImage());
-          }
-           //if the user click on save in Jfilechooser
-          else if(result == JFileChooser.CANCEL_OPTION){
-              System.out.println("No File Select");
-          }
-        
-    }//GEN-LAST:event_jButton3ActionPerformed
 
              
 

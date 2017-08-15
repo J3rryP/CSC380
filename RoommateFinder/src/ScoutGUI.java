@@ -22,6 +22,8 @@ public class ScoutGUI extends javax.swing.JFrame {
     /**
      * Creates new form ScoutGUI
      */
+    List<String> strings = Arrays.asList("Do you mind Clutter in Room?", "Do you mind alarm clocks?","Do you mind loud visitors?","Can you sleep with lights on?","Do you mind noise past Midnight?",
+    "Do you consider yourself as an introvert?", "Do you consider yourself as an extrovert?","Do you like to go to parties?","Do you drink alcoholic beverages?(21+)", "DONE!");
     
     
     String name , email , gender , major , year , language , building ;
@@ -79,17 +81,13 @@ public class ScoutGUI extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
-<<<<<<< HEAD
         buttonpressActionPerformed();
-=======
->>>>>>> refs/remotes/origin/master
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
         panel1.setLayout(panel1Layout);
         panel1Layout.setHorizontalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel1Layout.createSequentialGroup()
-<<<<<<< HEAD
                 .addGap(71, 71, 71)
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -98,28 +96,12 @@ public class ScoutGUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton2)))
                 .addContainerGap(75, Short.MAX_VALUE))
-=======
-                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panel1Layout.createSequentialGroup()
-                        .addGap(71, 71, 71)
-                        .addComponent(jButton1)
-                        .addGap(94, 94, 94)
-                        .addComponent(jButton2))
-                    .addGroup(panel1Layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(41, Short.MAX_VALUE))
->>>>>>> refs/remotes/origin/master
         );
         panel1Layout.setVerticalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel1Layout.createSequentialGroup()
                 .addContainerGap()
-<<<<<<< HEAD
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-=======
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
->>>>>>> refs/remotes/origin/master
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
@@ -145,27 +127,21 @@ public class ScoutGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         //skip and never
          
-        
+        buttonpressActionPerformed();
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         //match and update
-<<<<<<< HEAD
         int j = e.update(i, id);
         if(j == 1 ) JOptionPane.showMessageDialog(null, "Congrats! You have a roomie buddy!");
         buttonpressActionPerformed();
-=======
-        
-        
->>>>>>> refs/remotes/origin/master
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void buttonpressActionPerformed() { 
        
-<<<<<<< HEAD
         Student s = obj.get(index);
         
          jTextArea1.setText("NAME: "+ s.getName()+"\n");
@@ -177,9 +153,6 @@ public class ScoutGUI extends javax.swing.JFrame {
        jTextArea1.append("BUILDING: "+ s.getBuilding() +"\n");
          if (index < obj.size()-1) 
          index++;
-=======
-
->>>>>>> refs/remotes/origin/master
     }
     /**
      * @param args the command line arguments
