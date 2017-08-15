@@ -22,11 +22,23 @@ public class QuestionnaireGUI extends javax.swing.JFrame {
      * Creates new form QGUI
      */
     
-    List<String> strings = Arrays.asList("Do you mind Clutter in Room?", "Do you mind alarm clocks?","Do you mind loud visitors?","Can you sleep with lights on?","Do you mind noise past Midnight?",
-    "Do you consider yourself as an introvert?", "Do you consider yourself as an extrovert?","Do you like to go to parties?","Do you drink alcoholic beverages?(21+)", "DONE!");
+    //illegal forward reference
+   // List<String> strings = Arrays.asList(A,B,C,D,E,F,G,H,I,J);
     int index = 1;
-    String A,B,C,D,E,F,G,H,I, email, password;
+    String A = "Do you mind Clutter in Room?";
+    String B = "Do you mind alarm clocks?";
+    String C = "Do you mind loud visitors?";
+    String D = "Can you sleep with lights on?";
+    String E = "Do you mind noise past Midnight?";
+    String F = "Do you consider yourself as an introvert?";
+    String G = "Do you consider yourself as an extrovert?";
+    String H = "Do you like to go to parties?";
+    String I = "Do you drink alcoholic beverages?(21+)";
+    String J = "DONE!";
+   
+    String email, password;
     
+    List<String> strings = Arrays.asList(A,B,C,D,E,F,G,H,I,J);
     
     public QuestionnaireGUI() {
         initComponents(); 
@@ -148,7 +160,7 @@ public class QuestionnaireGUI extends javax.swing.JFrame {
             conn = DriverManager.getConnection(url, "root", "123ppp");  // Get a connection from the pool
             stmt = conn.createStatement();
             String f = "delete from questions where id = (select id from students where email = '"+email+"')";
-            String g = "insert into questions (A,B,C,D,E,F,G,H,I,id) values  ('"+A+"','"+B+"','"+C+"','"+D+"','"+E+"','"+F+"','"+G+"','"+H+"','"+I+"',(select id from students where email = '"+email+"'))";
+            String g = "insert into questions (A,B,C,D,E,F,G,H,I,J,id) values  ('"+A+"','"+B+"','"+C+"','"+D+"','"+E+"','"+F+"','"+G+"','"+H+"','"+I+"','"+J+"',(select id from students where email = '"+email+"'))";
             stmt.execute(f);
             
             if(!stmt.execute(g)){
