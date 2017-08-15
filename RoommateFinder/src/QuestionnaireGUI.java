@@ -22,11 +22,23 @@ public class QuestionnaireGUI extends javax.swing.JFrame {
      * Creates new form QGUI
      */
     
-    List<String> strings = Arrays.asList("Do you mind Clutter in Room?", "Do you mind alarm clocks?","Do you mind loud visitors?","Can you sleep with lights on?","Do you mind noise past Midnight?",
-    "Do you consider yourself as an introvert?", "Do you consider yourself as an extrovert?","Do you like to go to parties?","Do you drink alcoholic beverages?(21+)", "DONE!");
+    //illegal forward reference
+    // List<String> strings = Arrays.asList(A,B,C,D,E,F,G,H,I,J);
+    int index = 1;
+    String A = "Do you mind Clutter in Room?";
+    String B = "Do you mind alarm clocks?";
+    String C = "Do you mind loud visitors?";
+    String D = "Can you sleep with lights on?";
+    String E = "Do you mind noise past Midnight?";
+    String F = "Do you consider yourself as an introvert?";
+    String G = "Do you consider yourself as an extrovert?";
+    String H = "Do you like to go to parties?";
+    String I = "Do you drink alcoholic beverages?(21+)";
+    String J = "DONE!";
+   
+    String email, password;
     
-    String A,B,C,D,E,F,G,H,I, email, password;
-    
+    List<String> strings = Arrays.asList(A,B,C,D,E,F,G,H,I,J);
     
     public QuestionnaireGUI() {
         initComponents(); 
@@ -148,7 +160,7 @@ public class QuestionnaireGUI extends javax.swing.JFrame {
             conn = DriverManager.getConnection(url, "root", "123ppp");  // Get a connection from the pool
             stmt = conn.createStatement();
             String f = "delete from questions where id = (select id from students where email = '"+email+"')";
-            String g = "insert into questions (A,B,C,D,E,F,G,H,I,id) values  ('"+A+"','"+B+"','"+C+"','"+D+"','"+E+"','"+F+"','"+G+"','"+H+"','"+I+"',(select id from students where email = '"+email+"'))";
+            String g = "insert into questions (A,B,C,D,E,F,G,H,I,J,id) values  ('"+A+"','"+B+"','"+C+"','"+D+"','"+E+"','"+F+"','"+G+"','"+H+"','"+I+"','"+J+"',(select id from students where email = '"+email+"'))";
             stmt.execute(f);
             
             if(!stmt.execute(g)){
@@ -171,33 +183,49 @@ public class QuestionnaireGUI extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         
-        this.buttonpressActionPerformed(evt);
-        return;
+        buttonpressActionPerformed();
+        
        
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         
-       this.buttonpressActionPerformed(evt);
+       buttonpressActionPerformed();
        
         
         
         
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void buttonpressActionPerformed(java.awt.event.ActionEvent evt) { 
+    private void buttonpressActionPerformed() { 
        
        
+    /*   
        // int i = 0;
+        String labelText = "";
         
-  
-        for (String strin : strings)  
+        Iterator<String> iterator = strings.iterator();
+        
+        
+        //for (String strin : strings)  
+        if (iterator.hasNext())
+        
         {   
-              
-            jLabel6.setText(strin);
-                      
+            
+            //if (jButton2.isSelected() || jButton1.isSelected())
+            //{
+            labelText = labelText +" " + iterator.next();
+            //}       
+          
         }
+         jLabel1.setText(labelText);
+      */
+         
+         
+         jLabel6.setText(strings.get(index));
+         if (index < strings.size()-1) 
+         index++;
         
     }
     
