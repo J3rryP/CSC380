@@ -241,6 +241,7 @@ public class Student {
                     String n = rs.getString("name");
                     results[index]= n;
                 } 
+                System.out.println(index);
                 index++;
             }
             

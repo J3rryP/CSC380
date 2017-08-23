@@ -83,13 +83,13 @@ public class Engine {
             }
             
             if(check == 1 ){
-                String f = "update students set matches = '"+target+";' where id ="+id;
+                String f = "update students set matches = concat(matches,'"+target+";') where id ="+id;
                 stmt.execute(f);
-                String t = "update students set matches = '"+id+";' where id ="+target;
+                String t = "update students set matches = concat(matches,'"+id+";') where id ="+target;
                 stmt.execute(t);
             
             }else {
-                String f = "update students set new = '"+id+";' where id ="+target;
+                String f = "update students set new = concat(new,'"+id+";') where id ="+target;
                 stmt.execute(f);
             }
             
@@ -98,15 +98,7 @@ public class Engine {
         }
         return check;
     }
-    
-    public String fibre(int [] ids){
-       String s= "";
-        for(int a = 0; a<ids.length ; a++){
-            s += ids[a]+";";
-        }
-        
-        return s;
-    }
+   
     
     
     
