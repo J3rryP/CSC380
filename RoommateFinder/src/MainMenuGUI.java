@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -94,6 +97,11 @@ public class MainMenuGUI extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jButton2.setText("CONTACT");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jButton3.setText("Choose File...");
@@ -178,6 +186,15 @@ public class MainMenuGUI extends javax.swing.JFrame {
         ScoutGUI sc = new ScoutGUI(id);
         sc.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        String f = (String) jList1.getSelectedValue();
+        Engine g = new Engine();
+        Student r = g.single(f);
+        JOptionPane.showMessageDialog(null, "NAME "+r.getName()+"\n"+"EMAIL "+r.getEmail()+"\n"+"GENDER "+r.getGender()+"\n"+"YEAR "+r.getYear()+"\n"+"BUILDING "+r.getBuilding()+"\n");
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
              
 
