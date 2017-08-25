@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
@@ -11,6 +12,9 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
+=======
+import javax.swing.JOptionPane;
+>>>>>>> 952826f4ee0d80ef3e84395b336fe5b972462cc5
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -90,6 +94,11 @@ public class MainMenuGUI extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jButton2.setText("CONTACT");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setFont(new java.awt.Font("Courier", 0, 13)); // NOI18N
         jButton3.setText("Choose File...");
@@ -180,6 +189,7 @@ public class MainMenuGUI extends javax.swing.JFrame {
         sc.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
+<<<<<<< HEAD
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         
@@ -221,6 +231,16 @@ public class MainMenuGUI extends javax.swing.JFrame {
           }
         
     }//GEN-LAST:event_jButton3ActionPerformed
+=======
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        String f = (String) jList1.getSelectedValue();
+        Engine g = new Engine();
+        Student r = g.single(f);
+        JOptionPane.showMessageDialog(null, "NAME "+r.getName()+"\n"+"EMAIL "+r.getEmail()+"\n"+"GENDER "+r.getGender()+"\n"+"YEAR "+r.getYear()+"\n"+"BUILDING "+r.getBuilding()+"\n");
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+>>>>>>> 952826f4ee0d80ef3e84395b336fe5b972462cc5
 
              
 

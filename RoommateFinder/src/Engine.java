@@ -83,13 +83,13 @@ public class Engine {
             }
             
             if(check == 1 ){
-                String f = "update students set matches = '"+target+";' where id ="+id;
+                String f = "update students set matches = concat(matches,'"+target+";') where id ="+id;
                 stmt.execute(f);
-                String t = "update students set matches = '"+id+";' where id ="+target;
+                String t = "update students set matches = concat(matches,'"+id+";') where id ="+target;
                 stmt.execute(t);
             
             }else {
-                String f = "update students set new = '"+id+";' where id ="+target;
+                String f = "update students set new = concat(new,'"+id+";') where id ="+target;
                 stmt.execute(f);
             }
             
@@ -98,14 +98,37 @@ public class Engine {
         }
         return check;
     }
+   
     
-    public String fibre(int [] ids){
-       String s= "";
-        for(int a = 0; a<ids.length ; a++){
-            s += ids[a]+";";
+    public Student single(String i){
+         Connection conn = null;
+        Statement  stmt = null;
+        Student s = new Student();
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            String url = "jdbc:mysql://104.197.99.28:3306/room";
+            conn = DriverManager.getConnection(url, "root", "123ppp");  // Get a connection from the pool
+            stmt = conn.createStatement();
+            String f = "select * from students where name = '"+i+"'";
+            System.out.println(f);
+            ResultSet rs = null;
+            rs = stmt.executeQuery(f);
+            
+            while (rs.next()) {
+                s.name = rs.getString("name");
+                s.email = rs.getString("email");
+                s.gender = rs.getString("gender");
+                s.year = rs.getString("year");
+                s.building = rs.getString("building");
+                s.language = rs.getString("language");
+                s.major = rs.getString("major");
+                s.id = rs.getInt("id");
+            }
+        }catch(Exception se){
+            se.printStackTrace();
         }
-        
         return s;
+    
     }
     
     
