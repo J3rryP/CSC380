@@ -231,8 +231,8 @@ public class Student {
         }
         return null;
     }
-<<<<<<< HEAD
-=======
+//<<<<<<< HEAD
+//=======
     
     public String [] mtches(String a []){
         Connection conn = null;
@@ -273,6 +273,6 @@ public class Student {
         }
         return q;
     }
->>>>>>> 952826f4ee0d80ef3e84395b336fe5b972462cc5
+//>>>>>>> 952826f4ee0d80ef3e84395b336fe5b972462cc5
 
 }

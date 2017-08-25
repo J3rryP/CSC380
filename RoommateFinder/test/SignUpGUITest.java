@@ -4,48 +4,123 @@
  * and open the template in the editor.
  */
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
 
+
+import static org.junit.jupiter.api.Assertions.*;
 /**
  *
  * @author Jeremiah
  */
 public class SignUpGUITest {
     
-    public SignUpGUITest() {
+   @org.junit.jupiter.api.Test
+    public void testmCheckBoxActionPerformed() {
+        
+        SignUpGUI s = new SignUpGUI();
+        
+        s.gender = "M";
+        
+        assertTrue("F" == s.gender);
     }
     
-    @BeforeClass
-    public static void setUpClass() {
+    @org.junit.jupiter.api.Test
+    public void testfCheckBoxActionPerformed() {
+        
+        SignUpGUI s = new SignUpGUI();
+        
+        s.gender = "F";
+        
+        assertTrue("M" == s.gender);
     }
     
-    @AfterClass
-    public static void tearDownClass() {
+    @org.junit.jupiter.api.Test
+    public void testfreshmanCheckBoxActionPerformed() {
+        
+        SignUpGUI s = new SignUpGUI();
+        
+        s.year = "freshman";
+        
+        assertTrue("sophomore" == s.year);
     }
     
-    @Before
-    public void setUp() {
+    @org.junit.jupiter.api.Test
+    public void testsophomoreCheckBoxActionPerformed() {
+        
+        SignUpGUI s = new SignUpGUI();
+        
+        s.year = "sophomore";
+        
+        assertTrue("senior" == s.year);
     }
     
-    @After
-    public void tearDown() {
+    @org.junit.jupiter.api.Test
+    public void testjuniorCheckBoxActionPerformed() {
+        
+        SignUpGUI s = new SignUpGUI();
+        
+        s.year = "junior";
+        
+        assertTrue("freshman" == s.year);
     }
-
-    /**
-     * Test of main method, of class SignUpGUI.
-     */
-    @Test
-    public void testMain() {
-        System.out.println("main");
-        String[] args = null;
-        SignUpGUI.main(args);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    
+    @org.junit.jupiter.api.Test
+    public void testseniorCheckBoxActionPerformed() {
+        
+        SignUpGUI s = new SignUpGUI();
+        
+        s.year = "senior";
+        
+        assertTrue("junior" == s.year);
+    }
+    
+    @org.junit.jupiter.api.Test
+    public void testmComboBoxActionPerformed() {
+        
+        SignUpGUI s = new SignUpGUI();
+        
+        s.major = "Computer Science";
+        
+        assertTrue("Chemistry" == s.major);
+    }
+    
+    @org.junit.jupiter.api.Test
+    public void testemailFieldActionPerformed() {
+        
+        SignUpGUI s = new SignUpGUI();
+        
+        s.email = "joe@aol.com";
+        
+        assertTrue("joe2@aol.com" == s.email);
+    }
+    
+    @org.junit.jupiter.api.Test
+    public void testpassFieldActionPerformed() {
+        
+        SignUpGUI s = new SignUpGUI();
+        
+        s.password = "putty1";
+        
+        assertTrue("putty2" == s.password);
+    }
+    
+    @org.junit.jupiter.api.Test
+    public void testlComboBoxActionPerformed() {
+        
+        SignUpGUI s = new SignUpGUI();
+        
+        s.language = "English";
+        
+        assertTrue("Spanish" == s.language);
+    }
+    
+    @org.junit.jupiter.api.Test
+    public void testbComboBoxActionPerformed() {
+        
+        SignUpGUI s = new SignUpGUI();
+        
+        s.building = "Hart";
+        
+        assertTrue("Oneida" == s.building);
     }
     
 }

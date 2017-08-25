@@ -4,12 +4,9 @@
  * and open the template in the editor.
  */
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
@@ -17,35 +14,26 @@ import static org.junit.Assert.*;
  */
 public class LogInGUITest {
     
-    public LogInGUITest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
+    @org.junit.jupiter.api.Test
+    public void testlogInButtonActionPerformed() {
+        
+        LogInGUI s = new LogInGUI();
+        
+        Student t = new Student();
+        
+        s.email = "joe@aol.com";
+        s.password = "putty2";
+        
+        assertFalse(t.email == "joe@aol.com");
+        assertFalse(t.password == "putty2");
 
-    /**
-     * Test of main method, of class LogInGUI.
-     */
-    @Test
-    public void testMain() {
-        System.out.println("main");
-        String[] args = null;
-        LogInGUI.main(args);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    
+    
     }
+    
+       
+
+    
+
     
 }
